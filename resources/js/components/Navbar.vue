@@ -1,5 +1,6 @@
 <template>
     <div class="navbar">
+        
         <v-row class="justify-content-around align-items-center">
             <div class="nav-link brand text-center">
                 <router-link to="/" >
@@ -15,11 +16,7 @@
                 <router-link to="/contact" class="navlink mx-2">Contact Me</router-link>
             </div>
             <div style="display: flex;" >
-                <!-- <v-btn color="transparent" elevation="2" fab>
-                    <v-icon color="#e5e5e5" size="40" >
-                        mdi-moon-waning-crescent
-                    </v-icon>
-                </v-btn> -->
+                
                 
                 <v-switch
                     inset
@@ -28,18 +25,17 @@
                 >
                 </v-switch>
                 <v-icon v-if="darkMode" color="yellow" size="40" >                        
-                    <!-- mdi-moon-waning-crescent -->
-                    <!-- mdi-lightbulb-on-outline -->
-                    <!-- mdi-brightness-1 -->
+                    
                     mdi-lightbulb
                 </v-icon>
                 <v-icon v-if="!darkMode" color="#e5e5e5" size="40">
-                    <!-- mdi-moon-waning-crescent -->
+                   
                     mdi-lightbulb
                 </v-icon>
                 
             </div>
         </v-row>
+        
     </div>
 </template>
 
@@ -75,8 +71,10 @@ export default {
 .navlink {
     color: white !important;
 
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-family: "Source Sans Pro", sans-serif;
+    font-style: italic;
+    font-weight: 700;
 }
 
 .navlink:hover {
