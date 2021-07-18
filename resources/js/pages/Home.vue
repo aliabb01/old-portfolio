@@ -2,28 +2,30 @@
 <!-- home-main -->
     <main>
         <div>
-            <v-row class="vh-100">
-                <v-col md="6" class="text-center py-10 div1" style="">
+            <v-row class="" style="height: 100%">
+                <v-col md="6" class="text-center div1 py-15">
                     <IntroFirst />
                 </v-col>
                 <!-- <div class="white-triangle"></div> -->
-                <v-col md="6" class="text-center py-10 div2">
-                    
+                <v-col md="6" class="text-center div2 py-15">
                     <IntroSecond />
-                </v-col>
+                </v-col>               
             </v-row>
 
-            <IntroAvatar />
         </div>
+
+        <Tech />    
+              
     </main>
 </template>
 
 <script>
 import IntroFirst from '../components/IntroFirst.vue';
 import IntroSecond from '../components/IntroSecond.vue';
+import Tech from '../components/Tech.vue';
 
 export default {
-    components: { IntroFirst, IntroSecond },
+    components: { IntroFirst, IntroSecond, Tech },
 }
 </script>
 
@@ -42,12 +44,14 @@ export default {
     align-items: center;
 }
 
-.div1 {
-
-}
+/* .div1 {
+    background-color: black;
+} */
 
 .div2 {
     background-color: #195BDB;
+
+    border-bottom-left-radius: 100px;
 }
 
 .white-triangle {
