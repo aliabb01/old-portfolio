@@ -1,11 +1,16 @@
 <template>
     <div>
         <v-avatar
-            size="200"
-            color="#C4C4C4"
             style="border: 7px solid #195BDB !important;"
+            size="200"
         >
-            <span>Pic</span>
+            <v-avatar
+                size="170"
+                color="#C4C4C4"
+                
+            >
+                <span>Pic</span>
+            </v-avatar>
         </v-avatar>
     </div>
 </template>
