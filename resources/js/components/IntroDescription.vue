@@ -12,7 +12,7 @@
                 height="200"
                 width="500"
             >
-                <p class="description-text mx-15 my-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore atque ipsum eius quidem ea quae</p>
+                <p class="description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore atque ipsum eius quidem ea quae</p>
             </v-sheet>
         </div>
     </div>
@@ -25,15 +25,23 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap');
+
 
 .description-label {
-    font-size: 46px;
+    font-size: 2.7rem;
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-style: italic;
 }
 
 .description-text {
     font-size: 1.4rem;
+    font-family: 'Source Sans Pro', sans-serif;
     text-align: left;
+
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-bottom: 1rem;
 }
 </style>
