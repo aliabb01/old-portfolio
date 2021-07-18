@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-5">
+    <div style="" class="d-flex flex-column justify-content-center">
         <IntroAvatar />
         <IntroDescription />
         <IntroButton class="mt-10" />
@@ -16,5 +16,6 @@ export default {
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap');
 </style>

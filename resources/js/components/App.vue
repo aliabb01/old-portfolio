@@ -9,6 +9,11 @@
 import Navbar from './Navbar.vue';
 export default {
     components: { Navbar },
+    data() {
+        return {
+            
+        }
+    }
 }
 </script>
 
