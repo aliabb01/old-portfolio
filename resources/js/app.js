@@ -12,7 +12,21 @@ import VueRouter from "vue-router";
 import router from "./routes";
 import vuetify from './vuetify';
 
-Vue.use(VueRouter);
+import Vuex from "vuex";
+
+const store = new Vuex.Store({
+    state: {
+        darkTheme: false,        
+    },
+    mutations: {
+        toggleTheme(state) {
+            state.darkTheme = !state.darkTheme
+        }
+    }
+});
+
+Vue.use(VueRouter).use(store);
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -43,6 +57,7 @@ const app = new Vue({
         App
     },
     router,
+    store,
     vuetify
 });
 
