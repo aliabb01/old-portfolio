@@ -1,26 +1,42 @@
 <template>
     <div>
-        <p class="description-label my-4">Ali Abbasov</p>
+        <p class="description-label my-4" 
+            :style="darkTheme ? { color: darkNameLabel } : { color: lightNameLabel }"
+        >Ali Abbasov</p>
         
 
         <div class="d-flex justify-content-center">
             <v-sheet
-                style=""
+                :style="darkTheme ? { backgroundColor: darkDescriptionBg } : { backgroundColor: lightDescriptionBg }"
                 color="#e5e5e5"
                 class="rounded-xl"                
                 elevation="3"
                 height="200"
                 width="500"
             >
-                <p class="description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore atque ipsum eius quidem ea quae</p>
+                <p class="description-text"
+                    :style="darkTheme ? { color: darkNameLabel } : { color: lightNameLabel }"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore atque ipsum eius quidem ea quae</p>
             </v-sheet>
         </div>
     </div>
 </template>
 
 <script>
+import themes from '../themes';
+import { mapState } from 'vuex';
 export default {
-
+    data() {
+        return {
+            lightNameLabel: themes.light.text,
+            darkNameLabel: themes.dark.text,
+            lightDescriptionBg: themes.light.placeholder,
+            darkDescriptionBg: themes.dark.placeholder
+        }
+    },
+    computed: {
+        ...mapState(["darkTheme"])
+    }
 }
 </script>
 
