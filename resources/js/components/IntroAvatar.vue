@@ -1,8 +1,10 @@
 <template>
     <div>
         <v-avatar
-            style="border: 7px solid #195BDB !important;"
+            style="border-width: 7px; border-style: solid"
+            :style="darkTheme ? { borderColor: darkAvatarCircle } : { borderColor: lightAvatarCircle }"
             size="200"
+            class="shadow"
         >
             <v-avatar
                 size="170"
@@ -16,8 +18,18 @@
 </template>
 
 <script>
+import themes from '../themes';
+import { mapState } from 'vuex';
 export default {
-
+    data() {
+        return {
+            lightAvatarCircle: themes.light.secondary,
+            darkAvatarCircle: themes.dark.secondary
+        }
+    },
+    computed: {
+        ...mapState(["darkTheme"])
+    }
 }
 </script>
 

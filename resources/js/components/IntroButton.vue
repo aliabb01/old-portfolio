@@ -3,10 +3,12 @@
         <v-hover v-slot="{ hover }">
             <v-btn                
                 rounded                  
-                color="#1859dc20"  
+                color="#1859dc35"  
                 x-large                          
             >
-                <span class="intro-read-more">Read more ...
+                <span class="intro-read-more"
+                    :style="darkTheme ? { color: darkTextLabel } : { color: lightTextLabel }"
+                >Read more ...
                     <v-icon>
                         
                     </v-icon>
@@ -17,14 +19,24 @@
 </template>
 
 <script>
+import themes from '../themes';
+import { mapState } from 'vuex';
 export default {
-
+    data() {
+        return {
+            lightTextLabel: themes.light.text,
+            darkTextLabel: themes.dark.text
+        }
+    },
+    computed: {
+        ...mapState(["darkTheme"])
+    }
 }
 </script>
 
 <style>
 .intro-read-more {
-    color: #1859dc;
+    /* color: #1859dc; */
     /* color: white ; */
     font-size: 1rem;
     font-weight: 700;

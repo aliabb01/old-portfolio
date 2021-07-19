@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar">
+    <div class="navbar" :style="darkTheme ? {backgroundColor: darkNavbar} : {backgroundColor: lightNavbar}">
         
         <v-row class="justify-content-around align-items-center">
             <div class="nav-link brand text-center">
@@ -21,14 +21,15 @@
                 <v-switch
                     inset
                     color="yellow"
-                    v-model="darkMode"
+                    v-model="darkTheme"
+                    @click="toggleTheme(darkTheme)"
                 >
                 </v-switch>
-                <v-icon v-if="darkMode" color="yellow" size="40" >                        
+                <v-icon v-if="darkTheme" color="yellow" size="40" >                        
                     
                     mdi-lightbulb
                 </v-icon>
-                <v-icon v-if="!darkMode" color="#e5e5e5" size="40">
+                <v-icon v-if="!darkTheme" color="#e5e5e5" size="40">
                    
                     mdi-lightbulb
                 </v-icon>
@@ -40,11 +41,27 @@
 </template>
 
 <script>
+import themes from '../themes';
+import { mapState, mapMutations } from 'vuex';
 export default {
     data() {
         return {
-            darkMode: false
+            darkMode: false,
+            lightNavbar: themes.light.secondary,
+            darkNavbar: themes.dark.secondary
+            // darkNavbar: {
+            //     backgroundColor: themes.dark.secondary
+            // }
         }
+    },
+    computed: {
+        ...mapState(["darkTheme"])
+    },
+    methods: {
+        ...mapMutations(["toggleTheme"])
+    },
+    mounted() {
+        // console.log(this.themes.light.secondary);
     }
 };
 </script>
@@ -56,7 +73,7 @@ export default {
     padding-top: 1.0rem;
     padding-bottom: 1.0rem;
 
-    background-color: #195bdb;
+    /* background-color: #195bdb; */
 
     z-index: 99;
 }
@@ -86,5 +103,15 @@ export default {
     .brandColumn {
         display: none;
     }
+} */
+
+/* Navbar */
+
+/* .lightNavbar {
+    background-color: #195BDB;
+}
+
+.darkNavbar {
+
 } */
 </style>
