@@ -1,10 +1,10 @@
 const themes =  {
     light: {
-        primary: 'white',
+        primary: 'rgb(255, 255, 255)',
         secondary: 'dodgerblue',
         primaryLight: '#1859dc20',
         text:'rgb(10,10,10)',
-        placeholder: 'rgb(229, 229, 229)'
+        placeholder: 'rgb(220, 224, 227)'
     },
     dark: {
         primary: '#1F1926',
