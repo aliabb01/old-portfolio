@@ -26,7 +26,6 @@ export default {
     color: white;
 
     font-size: 2rem;
-    font-style: italic;
     font-family: 'Source Sans Pro', sans-serif;
 }
 </style>

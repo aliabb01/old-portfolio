@@ -3,6 +3,12 @@
         <IntroAvatar />
         <IntroDescription />
         <IntroButton class="mt-10" />
+
+        
+        <br>        
+
+        <IntroSocialLinks />
+        
     </div>
 </template>
 
@@ -10,8 +16,9 @@
 import IntroAvatar from '../components/IntroAvatar.vue';
 import IntroDescription from '../components/IntroDescription.vue';
 import IntroButton from '../components/IntroButton.vue';
+import IntroSocialLinks from '../components/IntroSocialLinks.vue';
 export default {
-    components: { IntroAvatar, IntroDescription, IntroButton },
+    components: { IntroAvatar, IntroDescription, IntroButton, IntroSocialLinks },
 }
 </script>
 
