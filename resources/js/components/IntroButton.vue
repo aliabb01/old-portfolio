@@ -3,16 +3,20 @@
         <v-hover v-slot="{ hover }">
             <v-btn                
                 rounded                  
-                color="#1859dc35"  
-                x-large                          
+                :color="darkTheme ? '#195BDB95' : '#1E90FF95' "  
+                large
+                :elevation="hover ? 0 : 2"
             >
-                <span class="intro-read-more"
+                <span class="get-in-touch d-flex align-items-center mr-2"
                     :style="darkTheme ? { color: darkTextLabel } : { color: lightTextLabel }"
-                >Read more ...
-                    <v-icon>
-                        
-                    </v-icon>
+                >Get in touch                    
                 </span>
+
+                <v-icon
+                    :style="darkTheme ? { color: darkTextLabel } : { color: lightTextLabel }"
+                >
+                    mdi-arrow-right
+                </v-icon>
             </v-btn>
         </v-hover>
     </div>
@@ -35,12 +39,11 @@ export default {
 </script>
 
 <style>
-.intro-read-more {
+.get-in-touch {
     /* color: #1859dc; */
     /* color: white ; */
     font-size: 1rem;
-    font-weight: 700;
-    font-style: italic;
     text-transform: none;
+    /* font-family: 'Source Sans Pro', sans-serif;     */
 }
 </style>
