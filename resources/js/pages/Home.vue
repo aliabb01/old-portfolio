@@ -7,7 +7,7 @@
                     <IntroFirst />
                 </v-col>
                 <!-- <div class="white-triangle"></div> -->
-                <v-col md="6" class="text-center div2 py-15" 
+                <v-col md="6" class="text-center div2 py-15 shadow" 
                     :style="darkTheme ? {backgroundColor: darkSecond} : {backgroundColor: ligthSecond}"
                 >
                     <IntroSecond />
@@ -16,7 +16,9 @@
 
         </div>
 
-        <Tech />    
+        <div class="my-15">
+            <Portfolio />
+        </div>
               
     </main>
 </template>
@@ -24,13 +26,13 @@
 <script>
 import IntroFirst from '../components/IntroFirst.vue';
 import IntroSecond from '../components/IntroSecond.vue';
-import Tech from '../components/Tech.vue';
+import Portfolio from '../components/Portfolio.vue';
 
 import themes from '../themes';
 import { mapState } from 'vuex';
 
 export default {
-    components: { IntroFirst, IntroSecond, Tech },
+    components: { IntroFirst, IntroSecond, Portfolio },
     data() {
         return {
             lightFirst: themes.light.primary,
