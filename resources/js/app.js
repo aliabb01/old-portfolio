@@ -26,6 +26,11 @@ const store = new Vuex.Store({
                 tags: [
                     'php',
                     'laravel',
+                ],
+                carouselImg: [
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350'
                 ]
             },
             {
