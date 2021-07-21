@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="">        
         <v-card
             style="border: none !important;"
         >
@@ -8,22 +8,34 @@
                     height="22rem"
                     :src="img"                  
                 >
+                    <v-skeleton-loader
+                        :loading="true"
+                        class="mx-auto"
+                        type="card"
+                        style=""
+                        v-if="portfolioLoading"
+                    ></v-skeleton-loader>
                     <v-expand-transition>
                         <div
                             v-if="hover"
                             class="d-flex transition-fast-in-fast-out v-card--reveal"
                             style="height: 100%;"
-                        >
-                            <!-- Kuzya 🐦 -->
+                        >                            
                             <div class="portfolio-hover-box">
+
+                                <div class="portfolio-hover-box-2">
+
+                                </div>
                                 <span class="portfolio-hover-box--title mx-2">{{ title }}</span>
 
-                                <span class="portfolio-hover-box--description mx-2">{{ description }}</span>
+                                <span class="portfolio-hover-box--description mx-2 mt-1">{{ description }}</span>
 
-                                <v-chip-group>
+                                <v-chip-group class="mt-4">
                                     <v-chip
                                         v-for="(item, i) in tags"
                                         :key="i"
+                                        small
+                                        :ripple="false"
                                     >
                                         {{ item }}
                                     </v-chip>
@@ -55,18 +67,47 @@
 
 <script>
 export default {
-    props: ["img", "title", "description", "tags"]
+    props: ["img", "title", "description", "tags", "loading", "index"],
+    data() {
+        return {
+            portfolioLoading: true
+        }
+    },
+    mounted() {
+        const readyHandler = () => {
+            if(document.readyState == 'complete') {
+                this.portfolioLoading = false;
+                document.removeEventListener('readystatechange', readyHandler);
+            }
+        }
+
+        document.addEventListener('readystatechange', readyHandler);
+        
+        readyHandler();
+    }
 }
 </script>
 
 <style>
 .v-card--reveal {
     align-items: center;
-    bottom: 0;
     justify-content: center;
-    background-color: rgb(30, 144, 255, 0.5);
     position: absolute;
+    bottom: 0;
+    background-color: #61DBFB75;    
     width: 100%;
+}
+
+.portfolio-hover-box-2 {
+    background-color: #0080ff;
+    border-radius: 5px;
+    height: 10rem;
+    width: 18rem;
+
+    position: absolute;
+    z-index: -1;
+    bottom: -15px;
+    right: -15px;
 }
 
 .portfolio-hover-box {
@@ -74,7 +115,7 @@ export default {
     width: 18rem;
 
     background-color: rgb(240, 240, 240);
-    border-radius: 10px;
+    border-radius: 5px;
 
     display: flex;
     flex-direction: column;
