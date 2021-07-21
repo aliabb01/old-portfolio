@@ -16,7 +16,64 @@ import Vuex from "vuex";
 
 const store = new Vuex.Store({
     state: {
-        darkTheme: false,        
+        darkTheme: false,
+        
+        portfolioData: [
+            {
+                img: 'https://picsum.photos/350',
+                title: 'Apollon Railway',
+                description: 'Railway Reservation System',
+                tags: [
+                    'php',
+                    'laravel',
+                ]
+            },
+            {
+                img: 'https://picsum.photos/350',
+                title: 'MyCookingLife',
+                description: 'Sweetmeats website',
+                tags: [
+                    'php',
+                    'laravel',
+                ]
+            },
+            {
+                img: 'https://picsum.photos/350',
+                title: 'Tweety',
+                description: 'Twitter clone',
+                tags: [
+                    'php',
+                    'laravel'
+                ]
+            },
+            {
+                img: 'https://picsum.photos/350',
+                title: 'Tweety',
+                description: 'Twitter clone',
+                tags: [
+                    'php',
+                    'laravel'
+                ]
+            },
+            {
+                img: 'https://picsum.photos/350',
+                title: 'Tweety',
+                description: 'Twitter clone',
+                tags: [
+                    'php',
+                    'laravel'
+                ]
+            },
+            {
+                img: 'https://picsum.photos/350',
+                title: 'Tweety',
+                description: 'Twitter clone',
+                tags: [
+                    'php',
+                    'laravel'
+                ]
+            }
+        ]
     },
     mutations: {
         toggleTheme(state) {

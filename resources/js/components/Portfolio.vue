@@ -1,21 +1,27 @@
 <template>
     <section class="tech-section mx-5 my-10">
         <div class="text-center my-10">
-            <span class="portfolio-heading-label">Portfolio</span>
+            <span class="portfolio-heading-label"
+                :style="darkTheme ? {color: darkText } : { color: lightText }"
+            >Portfolio</span>
         </div>
 
-        <div class="container">
+        <div class="">
             <div class="row justify-content-around">
                 <v-col
                     v-for="(item, i) in portfolioData"
                     :key="i"
-                    class="mx-15"
+                    class="px-5 my-5"
+                    lg="4"
+                    md="6"
+                    sm="12"
                 >
                     <PortfolioItem 
                         :img="item.img"
                         :title="item.title"
                         :description="item.description"
-                        :tags="item.tags" 
+                        :tags="item.tags"
+                        :index="i"
                     />
                 </v-col>
             </div>
@@ -24,37 +30,25 @@
 </template>
 
 <script>
+import themes from '../themes';
+import { mapState } from 'vuex';
+
 import PortfolioItem from './PortfolioItem.vue';
+// import readyHandler from '../helpers/readyHandler.js';
 export default {
     components: { PortfolioItem },
     data() {
         return {
-            portfolioData: [
-                {
-                    img: 'https://picsum.photos/350',
-                    title: 'Railway Reservation System',
-                    description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae, perspiciatis?',
-                    tags: [
-                        'php',
-                        'laravel',
-                    ]
-                },
-                {
-                    img: 'https://picsum.photos/350',
-                    title: 'MyCookingLife',
-                    description: 'Lorem ipsum dolor sit amet.',
-                    tags: [
-                        'php',
-                        'laravel',
-                    ]
-                },
-                {
-                    img: 'https://picsum.photos/350',
-                    title: 'Tweety'
-                }
-            ]
+            lightText: themes.light.text,
+            darkText: themes.dark.text,
+            // portfolioLoading: true,
+            
         }
-    }
+    },
+    computed: {
+        ...mapState(["darkTheme", "portfolioData"])
+    },
+    
 }
 </script>
 

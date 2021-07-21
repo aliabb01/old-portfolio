@@ -16,7 +16,7 @@
 
         </div>
 
-        <div class="my-15">
+        <div class="portfolio-cont my-15">
             <Portfolio />
         </div>
               
@@ -70,15 +70,8 @@ export default {
     border-bottom-left-radius: 100px;
 }
 
-/* .white-triangle {
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 45%;
-    width:20px;
-    height: 100%;
-
-    border-bottom: 89vh solid #195BDB;
-    border-left: 100px solid transparent;
-} */
+.portfolio-cont {
+    /* background-image: url('/images/portfolio_cont_bg.svg');
+    background-size: cover; */
+}
 </style>
