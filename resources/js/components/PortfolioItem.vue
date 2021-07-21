@@ -44,14 +44,15 @@
                                 <v-btn
                                     icon
                                     elevation="0"
-                                    
                                     style="position: absolute; bottom: 1%; right: 5%;"
+                                    :to="{ name: 'portfolioPage', params: { id: index } }"
                                 >
                                     <v-icon>
-                                        mdi-dots-horizontal
+                                        <!-- mdi-dots-horizontal -->
+                                        mdi-arrow-right
                                     </v-icon>
                                 </v-btn>
-                            </div>
+                            </div>                            
                         </div>
                     </v-expand-transition>
                 </v-img>
