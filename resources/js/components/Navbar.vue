@@ -2,13 +2,13 @@
     <div class="navbar" :style="darkTheme ? {backgroundColor: darkNavbar} : {backgroundColor: lightNavbar}">
         
         <v-row class="justify-content-around align-items-center">
-            <div class="nav-link brand text-center">
+            <!-- <div class="nav-link brand text-center">
                 <router-link to="/" >
                     <v-avatar size="5rem" color="white">
                         <img src="/images/logo.svg" alt="John" />
                     </v-avatar>
                 </router-link>
-            </div>
+            </div> -->
             <div class="nav">
                 <router-link to="/" class="navlink mx-2">Home</router-link>
                 <router-link to="/about" class="navlink mx-2">About</router-link>
