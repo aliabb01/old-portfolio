@@ -107,8 +107,8 @@ export default {
 
     position: absolute;
     z-index: -1;
-    bottom: -15px;
-    right: -15px;
+    bottom: -12px;
+    right: -12px;
 }
 
 .portfolio-hover-box {
