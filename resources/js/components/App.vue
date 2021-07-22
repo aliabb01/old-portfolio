@@ -1,5 +1,5 @@
 <template>
-    <v-app :style="darkTheme ? {backgroundColor: darkApp} : {backgroundColor: lightApp}" >
+    <v-app :style="darkTheme ? {backgroundColor: darkApp} : {backgroundColor: lightApp}">
         <Navbar />
         <router-view></router-view>
     </v-app>

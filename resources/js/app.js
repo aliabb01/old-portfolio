@@ -31,7 +31,8 @@ const store = new Vuex.Store({
                     'https://picsum.photos/350',
                     'https://picsum.photos/350',
                     'https://picsum.photos/350'
-                ]
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?'
             },
             {
                 img: 'https://picsum.photos/350',
