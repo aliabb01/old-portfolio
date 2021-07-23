@@ -15,66 +15,53 @@
                 <span class="mx-2">Back</span>
             </v-btn>
             
-            <div class="portfolio-item-page py-5 elevation-2">
+            <div class="portfolio-item-page py-5 elevation-2"
+                :style="darkTheme ? { backgroundColor: darkBg } : { backgroundColor: lightBg }"
+            >
 
                 <div class="my-5">
-                    <h4 class="portfolio-item--title text-center">{{ portfolioData[id].title }}</h4>
-                    <p class="portfolio-item--description text-center">{{ portfolioData[id].description }}</p>
-                </div>
-
-                <div class="carouselDiv">
-                    <v-carousel
-                        cycle
-                        style="width: 50rem; border-radius: 30px; !important"
-                        class="mx-auto"
+                    <h4 class="portfolio-item--title text-center"
+                        :style="darkTheme ? { color: darkText } : { color: lightText }"
                     >
-                        <v-carousel-item
-                            v-for="(slideImg, i) in portfolioData[id].carouselImg"
-                            :key="i"                            
-                        >
-                            <v-sheet
-                                height="110%"
-                            >
-                                <v-row
-                                    class="fill-height"
-                                >
-
-                                    <v-img
-                                        :src="slideImg"
-                                        class="portfolioImageCarousel"
-                                    >
-                                    </v-img>
-
-                                </v-row>
-                            </v-sheet>
-                        </v-carousel-item>
-                    </v-carousel>
+                        {{ portfolioData[id].title }}
+                    </h4>
+                    <p class="portfolio-item--description text-center"
+                        :style="darkTheme ? { color: darkText } : { color: lightText }"
+                    >
+                        {{ portfolioData[id].description }}
+                    </p>
                 </div>
+                
+                <Carousel :carouselImg="portfolioData[id].carouselImg" />                
 
-                <div class="container" style="text-align: left; max-width: 50rem">
+                <div class="container" style="text-align: left; max-width: 50rem">                    
                     <div>
-                        <p class="portfolio-item--longDescription my-5" style="margin-bottom: 0px; font-size: 1.2rem">
+                        <p class="portfolio-item--longDescription my-5" style="margin-bottom: 0px; font-size: 1.2rem"
+                            :style="darkTheme ? { color: darkText } : { color: lightText }"
+                        >
                             {{ portfolioData[id].longDescription }}
                         </p>
                     </div>
+
+                    <Tags 
+                        :tags="portfolioData[id].tags"
+                        :dark="darkTheme"
+                        :lightText="lightText"
+                        :darkText="darkText"
+                        :lightTag="lightTag"
+                        :darkTag="darkTag"
+                    />
+                    
                 </div>
 
-                <div class="container " style="max-width: 50rem">
-                    <div class="mt-4">
-                        <i class="mx-2"><b>Related tags :</b></i>
-                        <v-chip-group>
-                            
-                            <v-chip
-                                v-for="(item, i) in portfolioData[id].tags"
-                                :key="i"
-                                
-                                :ripple="false"
-                                class="mx-2"
-                            >
-                                <span> {{ item }}</span>
-                            </v-chip>
-                        </v-chip-group>
-                    </div>
+                <div class="container" style="max-width: 50rem; border-top: 1px solid gray">
+                    <Links 
+                        :linkLive="portfolioData[id].links.live"
+                        :linkGithub="portfolioData[id].links.github"
+                        :dark="darkTheme"
+                        :lightText="lightText"
+                        :darkText="darkText"
+                    />                    
                 </div>
             </div>
 
@@ -83,11 +70,33 @@
 </template>
 
 <script>
+import themes from '../themes';
 import { mapState } from 'vuex';
+
+import Carousel from '../components/PortfolioItemPage/Carousel.vue';
+import Links from '../components/PortfolioItemPage/Links.vue';
+import Tags from '../components/PortfolioItemPage/Tags.vue';
+
 export default {
+    components: { Carousel, Links, Tags },
     props: ["id"],
+    data() {
+        return {
+            lightText: themes.light.text,
+            darkText: themes.dark.text,
+
+            lightLightText: themes.light.textLight,
+            lightDarkText: themes.dark.textLight,
+
+            lightBg: themes.light.placeholder,
+            darkBg: themes.dark.placeholder,
+
+            lightTag: themes.light.tag,
+            darkTag: themes.dark.tag,
+        }
+    },
     computed: {
-        ...mapState(["portfolioData"])
+        ...mapState(["darkTheme", "portfolioData"])
     },
     mounted() {
         window.scrollTo(0, 0)
@@ -97,7 +106,7 @@ export default {
 
 <style>
 .portfolio-item-page {
-    /* background-color: rgb(220, 224, 227); */
+    /* background-color: rgb(245, 245, 245); */
     border-radius: 50px;
 }
 
@@ -125,5 +134,10 @@ export default {
 
 #app > div > div:nth-child(2) > div > div > div:nth-child(3) > div > div.v-carousel__controls > div > button {
     color: white;
+}
+
+.links {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
 }
 </style>
