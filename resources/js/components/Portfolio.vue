@@ -22,6 +22,9 @@
                         :description="item.description"
                         :tags="item.tags"
                         :index="i"
+                        :dark="darkTheme"
+                        :lightText="lightText"
+                        :darkText="darkText"
                     />
                 </v-col>
             </div>

@@ -6,7 +6,7 @@
             <v-hover v-slot="{ hover }">
                 <v-img                    
                     height="22rem"
-                    :src="img"                  
+                    :src="img"
                 >
                     <v-skeleton-loader
                         :loading="true"
@@ -19,14 +19,26 @@
                         <div
                             v-if="hover"
                             class="d-flex transition-fast-in-fast-out v-card--reveal"
-                            style="height: 100%;"
+                            style="height: 100%; z-index: 0"
+                            :style="dark ? { backgroundColor: '#195BDB70' } : { backgroundColor: '#61DBFB75' }"
                         >                            
-                            <div class="portfolio-hover-box">
+                            <div 
+                                class="portfolio-hover-box"
+                                :style="dark ? { backgroundColor: darkBg } : { backgroundColor: lightBg }"
+                            >
 
-                                <div class="portfolio-hover-box-2">
+                                <div 
+                                    class="portfolio-hover-box-2"
+                                    :style="dark ? { backgroundColor: darkBg2 } : { backgroundColor: lightBg2 }"
+                                >
 
                                 </div>
-                                <span class="portfolio-hover-box--title mx-2">{{ title }}</span>
+                                <span 
+                                    class="portfolio-hover-box--title mx-2"
+                                    :style="dark ? { color: darkText } : { color: lightText }"
+                                >
+                                    {{ title }}
+                                </span>
 
                                 <span class="portfolio-hover-box--description mx-2 mt-1">{{ description }}</span>
 
@@ -36,22 +48,30 @@
                                         :key="i"
                                         small
                                         :ripple="false"
+                                        :color="dark ? darkTag : lightTag"
+                                        :text-color="dark ? darkText : lightText"
                                     >
                                         {{ item }}
                                     </v-chip>
                                 </v-chip-group>
+                                
+                                <v-hover v-slot="{ hover }">
+                                    <v-btn
+                                        icon
+                                        elevation="0"
+                                        style="position: absolute; bottom: 1%; right: 5%; text-decoration: none;"
+                                        :style="hover ? { transform: 'translateX(' + 7 + 'px)' } : ''"
+                                        :to="{ name: 'portfolioPage', params: { id: index } }"
+                                    >
+                                        <v-icon
+                                            :color="dark ? (hover ? darkBg2 : darkText) : (hover ? lightBg2 : lightText)"
+                                        >
+                                            <!-- mdi-dots-horizontal -->
+                                            mdi-arrow-right
+                                        </v-icon>
+                                    </v-btn>
+                                </v-hover>
 
-                                <v-btn
-                                    icon
-                                    elevation="0"
-                                    style="position: absolute; bottom: 1%; right: 5%;"
-                                    :to="{ name: 'portfolioPage', params: { id: index } }"
-                                >
-                                    <v-icon>
-                                        <!-- mdi-dots-horizontal -->
-                                        mdi-arrow-right
-                                    </v-icon>
-                                </v-btn>
                             </div>                            
                         </div>
                     </v-expand-transition>
@@ -67,11 +87,22 @@
 </template>
 
 <script>
+import themes from '../themes';
+
 export default {
-    props: ["img", "title", "description", "tags", "loading", "index"],
+    props: ["img", "title", "description", "tags", "loading", "index", "dark", "lightText", "darkText"],
     data() {
         return {
-            portfolioLoading: true
+            portfolioLoading: true,
+
+            lightBg: themes.light.placeholder,
+            darkBg: themes.dark.placeholder,
+
+            lightBg2: themes.light.secondary,
+            darkBg2: themes.dark.secondary,
+
+            lightTag: themes.light.tag,
+            darkTag: themes.dark.tag
         }
     },
     mounted() {
@@ -85,6 +116,7 @@ export default {
         document.addEventListener('readystatechange', readyHandler);
         
         readyHandler();
+        // console.log(window)
     }
 }
 </script>
@@ -95,12 +127,11 @@ export default {
     justify-content: center;
     position: absolute;
     bottom: 0;
-    background-color: #61DBFB75;    
+    /* background-color: #61DBFB75;     */
     width: 100%;
 }
 
 .portfolio-hover-box-2 {
-    background-color: #0080ff;
     border-radius: 5px;
     height: 10rem;
     width: 18rem;
@@ -115,7 +146,6 @@ export default {
     height: 10rem;
     width: 18rem;
 
-    background-color: rgb(240, 240, 240);
     border-radius: 5px;
 
     display: flex;
@@ -134,7 +164,7 @@ export default {
 }
 
 .portfolio-hover-box--description {
-    color: rgb(136, 136, 136);
+    color: rgb(140, 140, 140);
     font-size: 0.95rem;
     font-family: "Source Sans Pro", sans-serif;
 }
