@@ -32,16 +32,30 @@ const store = new Vuex.Store({
                     'https://picsum.photos/350',
                     'https://picsum.photos/350'
                 ],
-                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?'
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: '',
+                    live: ''
+                }
             },
             {
-                img: 'https://picsum.photos/350',
+                img: '/images/mockups/smartmockups_mycookinglife.png',
                 title: 'MyCookingLife',
                 description: 'Sweetmeats website',
                 tags: [
                     'php',
                     'laravel',
-                ]
+                ],
+                carouselImg: [
+                    '/images/mockups/smartmockups_mycookinglife.png',
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350'
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: 'https://github.com/aliabb01/My_CookingLife',
+                    live: 'https://my-cooking-life.herokuapp.com'
+                }
             },
             {
                 img: 'https://picsum.photos/350',
@@ -50,7 +64,17 @@ const store = new Vuex.Store({
                 tags: [
                     'php',
                     'laravel'
-                ]
+                ],
+                carouselImg: [
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350'
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: '',
+                    live: ''
+                }
             },
             {
                 img: 'https://picsum.photos/350',
@@ -59,7 +83,17 @@ const store = new Vuex.Store({
                 tags: [
                     'php',
                     'laravel'
-                ]
+                ],
+                carouselImg: [
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350'
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: '',
+                    live: ''
+                }
             },
             {
                 img: 'https://picsum.photos/350',
@@ -68,7 +102,17 @@ const store = new Vuex.Store({
                 tags: [
                     'php',
                     'laravel'
-                ]
+                ],
+                carouselImg: [
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350'
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: '',
+                    live: ''
+                }
             },
             {
                 img: 'https://picsum.photos/350',
@@ -77,7 +121,17 @@ const store = new Vuex.Store({
                 tags: [
                     'php',
                     'laravel'
-                ]
+                ],
+                carouselImg: [
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350'
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: '',
+                    live: ''
+                }
             }
         ]
     },
