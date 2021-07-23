@@ -1,7 +1,9 @@
 <template>
     <v-app :style="darkTheme ? {backgroundColor: darkApp} : {backgroundColor: lightApp}">
         <Navbar />
-        <router-view></router-view>
+        <transition name="fade" mode="out-in">
+            <router-view />
+        </transition>
     </v-app>
 </template>
 
@@ -24,5 +26,13 @@ export default {
 </script>
 
 <style>
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
 
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.3s ease-out;
+}
 </style>
