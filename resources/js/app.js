@@ -23,6 +23,7 @@ const store = new Vuex.Store({
                 img: 'https://picsum.photos/350',
                 title: 'Apollon Railway',
                 description: 'Railway Reservation System',
+                category: 'Web app',
                 tags: [
                     'php',
                     'laravel',
@@ -39,17 +40,65 @@ const store = new Vuex.Store({
                 }
             },
             {
-                img: '/images/mockups/smartmockups_mycookinglife.png',
+                img: 'https://picsum.photos/350',
+                title: 'RMS',
+                description: 'Restaurant Management System',
+                category: 'Web app',
+                tags: [
+                    'php',
+                    'laravel'
+                ],
+                carouselImg: [
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350'
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: '',
+                    live: ''
+                }
+            },
+            {
+                img: '/images/mockups/tweety.png',
+                title: 'Tweety',
+                description: 'Twitter clone',
+                category: 'Web app',
+                tags: [
+                    'php',
+                    'laravel'
+                ],
+                carouselImg: [
+                    '/images/mockups/tweety.png',
+                    '/images/tweety/tweety1.jpg',
+                    '/images/tweety/tweety2.jpg',
+                    '/images/tweety/tweety3.jpg',
+                    '/images/tweety/tweety4.jpg',
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: '',
+                    live: ''
+                }
+            },
+            {
+                img: '/images/mockups/mycookinglife.png',
                 title: 'MyCookingLife',
                 description: 'Sweetmeats website',
+                category: 'Web app',
                 tags: [
                     'php',
                     'laravel',
                 ],
                 carouselImg: [
-                    '/images/mockups/smartmockups_mycookinglife.png',
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350'
+                    '/images/mockups/mycookinglife.png',
+                    '/images/mycookinglife/1.jpg',
+                    '/images/mycookinglife/2.jpg',
+                    '/images/mycookinglife/3.jpg',
+                    '/images/mycookinglife/4.jpg',
+                    '/images/mycookinglife/5.jpg',
+                    '/images/mycookinglife/6.jpg',
+                    '/images/mycookinglife/7.jpg',
                 ],
                 longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
                 links: {
@@ -58,9 +107,31 @@ const store = new Vuex.Store({
                 }
             },
             {
+                img: '/images/mockups/erra.png',
+                title: 'ERRA',
+                description: 'Portfolio website',
+                category: 'Website',
+                tags: [
+                    'php',
+                    'laravel',
+                    'vue'
+                ],
+                carouselImg: [
+                    '/images/mockups/erra.png',
+                    'https://picsum.photos/350',
+                    'https://picsum.photos/350'
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: '',
+                    live: ''
+                }
+            },
+            {
                 img: 'https://picsum.photos/350',
                 title: 'Tweety',
                 description: 'Twitter clone',
+                category: 'Web app',
                 tags: [
                     'php',
                     'laravel'
@@ -78,46 +149,9 @@ const store = new Vuex.Store({
             },
             {
                 img: 'https://picsum.photos/350',
-                title: 'Tweety',
-                description: 'Twitter clone',
-                tags: [
-                    'php',
-                    'laravel'
-                ],
-                carouselImg: [
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350'
-                ],
-                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
-                links: {
-                    github: '',
-                    live: ''
-                }
-            },
-            {
-                img: 'https://picsum.photos/350',
-                title: 'Tweety',
-                description: 'Twitter clone',
-                tags: [
-                    'php',
-                    'laravel'
-                ],
-                carouselImg: [
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350'
-                ],
-                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
-                links: {
-                    github: '',
-                    live: ''
-                }
-            },
-            {
-                img: 'https://picsum.photos/350',
-                title: 'Tweety',
-                description: 'Twitter clone',
+                title: 'Finager',
+                description: 'Finance Manager app',
+                category: 'Mobile app',
                 tags: [
                     'php',
                     'laravel'
