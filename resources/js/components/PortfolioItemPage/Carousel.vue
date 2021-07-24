@@ -3,18 +3,21 @@
         <v-carousel
             cycle
             style="width: 50rem; border-radius: 30px; !important"
-            class="mx-auto"
+            class="mx-auto shadow"
+            height="auto"
+            hide-delimiter-background
+            
         >
             <v-carousel-item
                 v-for="(slideImg, i) in carouselImg"
                 :key="i"
-            >
-                <v-sheet height="110%">
-                    <v-row class="fill-height">
-                        <v-img :src="slideImg" class="portfolioImageCarousel">
-                        </v-img>
-                    </v-row>
-                </v-sheet>
+            >                
+                <v-img 
+                    :src="slideImg"
+                    class="portfolioImageCarousel"
+                    :aspect-ratio="16/9.15"
+                >
+                </v-img>
             </v-carousel-item>
         </v-carousel>
     </div>
@@ -22,7 +25,7 @@
 
 <script>
 export default {
-    props: ['carouselImg']
+    props: ['carouselImg'],
 };
 </script>
 
