@@ -6,12 +6,12 @@
             >Portfolio</span>
         </div>
 
-        <div class="">
+        <div class="container">
             <div class="row justify-content-around">
                 <v-col
                     v-for="(item, i) in portfolioData"
                     :key="i"
-                    class="px-5 my-5"
+                    class="my-5"
                     lg="4"
                     md="6"
                     sm="12"
@@ -20,8 +20,10 @@
                         :img="item.img"
                         :title="item.title"
                         :description="item.description"
+                        :category="item.category"
                         :tags="item.tags"
-                        :index="i"
+                        :inDevelopment="item.inDevelopment"
+                        :index="i"                        
                         :dark="darkTheme"
                         :lightText="lightText"
                         :darkText="darkText"

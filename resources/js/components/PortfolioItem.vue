@@ -1,20 +1,38 @@
 <template>
     <div class="">        
         <v-card
-            style="border: none !important;"
+            style="border: none !important; position: relative;"
         >
+            <v-chip 
+                v-if="inDevelopment"
+                style="position: absolute; z-index: 3; top: -1.2rem; left: -1.4rem;"
+                color="success"
+            >
+                In Development
+            </v-chip>
+
+            <ChipInDevelopment 
+                :inDevelopment="inDevelopment"
+                color="success"
+                text="In Development"
+            />
+
             <v-hover v-slot="{ hover }">
-                <v-img                    
+                <!-- 22rem -->
+                <v-img
                     height="22rem"
                     :src="img"
                 >
-                    <v-skeleton-loader
-                        :loading="true"
-                        class="mx-auto"
-                        type="card"
-                        style=""
-                        v-if="portfolioLoading"
-                    ></v-skeleton-loader>
+                    <!-- v-if="portfolioLoading" -->
+                    <template v-slot:placeholder>
+                        <v-skeleton-loader
+                            :loading="true"
+                            class="mx-auto"
+                            type="card"
+                            style=""
+                        ></v-skeleton-loader>
+                    </template>
+                    
                     <v-expand-transition>
                         <div
                             v-if="hover"
@@ -33,6 +51,14 @@
                                 >
 
                                 </div>
+
+                                <!-- Category -->
+                                <span class="portfolio-hover-box--description mx-2 mt-1"
+                                    :style="dark ? { color: 'lime' } : { color: 'forestgreen' }"
+                                >
+                                    {{ category }}
+                                </span>
+
                                 <span 
                                     class="portfolio-hover-box--title mx-2"
                                     :style="dark ? { color: darkText } : { color: lightText }"
@@ -41,6 +67,8 @@
                                 </span>
 
                                 <span class="portfolio-hover-box--description mx-2 mt-1">{{ description }}</span>
+
+                                
 
                                 <v-chip-group class="mt-4">
                                     <v-chip
@@ -57,9 +85,10 @@
                                 
                                 <v-hover v-slot="{ hover }">
                                     <v-btn
+                                        :ripple="false"
                                         icon
                                         elevation="0"
-                                        style="position: absolute; bottom: 1%; right: 5%; text-decoration: none;"
+                                        style="position: absolute; bottom: 1%; right: 5%; text-decoration: none; transition: all 0.3s"
                                         :style="hover ? { transform: 'translateX(' + 7 + 'px)' } : ''"
                                         :to="{ name: 'portfolioPage', params: { id: index } }"
                                     >
@@ -88,9 +117,11 @@
 
 <script>
 import themes from '../themes';
+import ChipInDevelopment from './ChipInDevelopment';
 
 export default {
-    props: ["img", "title", "description", "tags", "loading", "index", "dark", "lightText", "darkText"],
+    props: ["img", "title", "description", "category", "tags", "inDevelopment", "index", "dark", "lightText", "darkText"],
+    components: { ChipInDevelopment },
     data() {
         return {
             portfolioLoading: true,

@@ -165,7 +165,8 @@ const store = new Vuex.Store({
                 links: {
                     github: '',
                     live: ''
-                }
+                },
+                inDevelopment: true
             }
         ]
     },
