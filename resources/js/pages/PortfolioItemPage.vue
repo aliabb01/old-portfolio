@@ -132,8 +132,14 @@ export default {
     object-fit: contain;
 }
 
-#app > div > div:nth-child(2) > div > div > div:nth-child(3) > div > div.v-carousel__controls > div > button {
-    color: white;
+/* carousel delimiter */
+#app > div > div:nth-child(2) > div > div > div.carouselDiv > div > div.v-carousel__controls > div > button {
+    color: black;
+}
+
+/* active carousel delimiter */
+#app > div > div:nth-child(2) > div > div > div.carouselDiv > div > div.v-carousel__controls > div > button.v-item--active {
+    color: dodgerblue;
 }
 
 .links {
