@@ -3,13 +3,13 @@
         <v-card
             style="border: none !important; position: relative;"
         >
-            <v-chip 
+            <!-- <v-chip 
                 v-if="inDevelopment"
                 style="position: absolute; z-index: 3; top: -1.2rem; left: -1.4rem;"
                 color="success"
             >
                 In Development
-            </v-chip>
+            </v-chip> -->
 
             <ChipInDevelopment 
                 :inDevelopment="inDevelopment"
