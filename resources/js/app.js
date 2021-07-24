@@ -70,7 +70,7 @@ const store = new Vuex.Store({
                 ],
                 carouselImg: [
                     '/images/mockups/tweety.png',
-                    '/images/tweety/tweety1.png',
+                    'images/tweety/tweety1.png',
                     '/images/tweety/tweety2.jpg',
                     '/images/tweety/tweety3.jpg',
                     '/images/tweety/tweety4.jpg',
