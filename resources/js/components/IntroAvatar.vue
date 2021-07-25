@@ -9,9 +9,12 @@
             <v-avatar
                 size="170"
                 color="#C4C4C4"
-                
             >
                 <span>Pic</span>
+                <!-- <img
+                    src="/images/some_image_here"
+                    alt="John"
+                > -->
             </v-avatar>
         </v-avatar>
     </div>
