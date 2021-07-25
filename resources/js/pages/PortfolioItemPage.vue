@@ -6,25 +6,68 @@
                 class="my-5"
                 color="red lighten-1"
                 outlined
-                @click="$router.go(-1)"
+                @click="$router.push({
+                    name: 'home'
+                })"
             >
                 <v-icon>
                     mdi-arrow-left
                 </v-icon>
                 
-                <span class="mx-2">Back</span>
+                <span class="mx-2">Home</span>
             </v-btn>
             
             <div class="portfolio-item-page py-5 elevation-2"
                 :style="darkTheme ? { backgroundColor: darkBg } : { backgroundColor: lightBg }"
             >
-
-                <div class="my-5">
-                    <h4 class="portfolio-item--title text-center"
-                        :style="darkTheme ? { color: darkText } : { color: lightText }"
-                    >
-                        {{ portfolioData[id].title }}
-                    </h4>
+                <div class="my-5">                        
+                    <div class="" style="position: relative;">
+                        <div style="position: absolute; top: 0px; left: 0px;">
+                            <v-btn
+                                v-if="id!=0"
+                                @click="$router.push({
+                                    name: 'portfolioPage',
+                                    params: {
+                                        id: --id
+                                    }
+                                })"
+                                small
+                                elevation="0"
+                                style="background-color: transparent"
+                            >
+                                <v-icon>
+                                    mdi-arrow-left
+                                </v-icon>
+                            </v-btn>
+                        </div>
+                        
+                        <div>
+                            <h4 class="portfolio-item--title text-center"
+                                :style="darkTheme ? { color: darkText } : { color: lightText }"
+                            >
+                                {{ portfolioData[id].title }} <span style="font-size: 50%;" v-if="portfolioData[id].inDevelopment">(In Development)</span>
+                            </h4>
+                        </div>
+                        
+                        <div style="position: absolute; top: 0px; right: 0px;">
+                            <v-btn
+                                v-if="id!=portfolioData.length - 1"
+                                @click="$router.push({
+                                    name: 'portfolioPage',
+                                    params: {
+                                        id: ++id
+                                    }
+                                })"
+                                small
+                                elevation="0"
+                                style="background-color: transparent"
+                            >
+                                <v-icon>
+                                    mdi-arrow-right
+                                </v-icon>
+                            </v-btn>
+                        </div>
+                    </div>
                     <p class="portfolio-item--description text-center"
                         :style="darkTheme ? { color: darkText } : { color: lightText }"
                     >
@@ -80,9 +123,10 @@ import { mapState } from 'vuex';
 import Carousel from '../components/PortfolioItemPage/Carousel.vue';
 import Links from '../components/PortfolioItemPage/Links.vue';
 import Tags from '../components/PortfolioItemPage/Tags.vue';
+import ChipInDevelopment from '../components/ChipInDevelopment.vue';
 
 export default {
-    components: { Carousel, Links, Tags },
+    components: { Carousel, Links, Tags, ChipInDevelopment },
     props: ["id"],
     data() {
         return {
@@ -103,7 +147,7 @@ export default {
         ...mapState(["darkTheme", "portfolioData"])
     },
     mounted() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
     }
 }
 </script>
