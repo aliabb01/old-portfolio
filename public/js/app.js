@@ -2522,8 +2522,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2595,8 +2593,50 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['carouselImg']
+  props: ['carouselImg'],
+  data: function data() {
+    return {
+      imagesOpen: false,
+      imageId: 0
+    };
+  }
 });
 
 /***/ }),
@@ -2818,10 +2858,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _themes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../themes */ "./resources/js/themes.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _components_PortfolioItemPage_Carousel_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/PortfolioItemPage/Carousel.vue */ "./resources/js/components/PortfolioItemPage/Carousel.vue");
 /* harmony import */ var _components_PortfolioItemPage_Links_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/PortfolioItemPage/Links.vue */ "./resources/js/components/PortfolioItemPage/Links.vue");
 /* harmony import */ var _components_PortfolioItemPage_Tags_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/PortfolioItemPage/Tags.vue */ "./resources/js/components/PortfolioItemPage/Tags.vue");
+/* harmony import */ var _components_ChipInDevelopment_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ChipInDevelopment.vue */ "./resources/js/components/ChipInDevelopment.vue");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2903,6 +2944,50 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -2912,7 +2997,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   components: {
     Carousel: _components_PortfolioItemPage_Carousel_vue__WEBPACK_IMPORTED_MODULE_1__.default,
     Links: _components_PortfolioItemPage_Links_vue__WEBPACK_IMPORTED_MODULE_2__.default,
-    Tags: _components_PortfolioItemPage_Tags_vue__WEBPACK_IMPORTED_MODULE_3__.default
+    Tags: _components_PortfolioItemPage_Tags_vue__WEBPACK_IMPORTED_MODULE_3__.default,
+    ChipInDevelopment: _components_ChipInDevelopment_vue__WEBPACK_IMPORTED_MODULE_4__.default
   },
   props: ["id"],
   data: function data() {
@@ -2927,7 +3013,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       darkTag: _themes__WEBPACK_IMPORTED_MODULE_0__.default.dark.tag
     };
   },
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapState)(["darkTheme", "portfolioData"])),
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_5__.mapState)(["darkTheme", "portfolioData"])),
   mounted: function mounted() {
     window.scrollTo(0, 0);
   }
@@ -3064,7 +3150,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_2__.default.Store({
       title: 'Finager',
       description: 'Finance Manager app',
       category: 'Mobile app',
-      tags: ['php', 'laravel'],
+      tags: ['react', 'react-native'],
       carouselImg: ['https://picsum.photos/350', 'https://picsum.photos/350', 'https://picsum.photos/350'],
       longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
       links: {
@@ -7986,6 +8072,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.v-btn[data-v-59fb76a0]::before {\r\n  background-color: transparent !important;\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.portfolioImageCarousel:hover {\r\n    cursor: pointer;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39388,6 +39498,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css& ***!
@@ -40189,15 +40329,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Carousel_vue_vue_type_template_id_3d509f20___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Carousel.vue?vue&type=template&id=3d509f20& */ "./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=template&id=3d509f20&");
 /* harmony import */ var _Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Carousel.vue?vue&type=script&lang=js& */ "./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Carousel.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
   _Carousel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
   _Carousel_vue_vue_type_template_id_3d509f20___WEBPACK_IMPORTED_MODULE_0__.render,
   _Carousel_vue_vue_type_template_id_3d509f20___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -40926,6 +41068,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Carousel_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Carousel.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItemPage/Carousel.vue?vue&type=style&index=0&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&":
 /*!**********************************************************************!*\
   !*** ./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css& ***!
@@ -41347,7 +41502,7 @@ var render = function() {
           },
           style: _vm.hover
             ? [
-                { transform: "rotate(" + -20 + "deg)" },
+                { transform: "rotate(" + -370 + "deg)" },
                 { transition: "all 0.2s" }
               ]
             : "",
@@ -42273,12 +42428,90 @@ var render = function() {
             [
               _c("v-img", {
                 staticClass: "portfolioImageCarousel",
-                attrs: { src: slideImg, "aspect-ratio": 16 / 9.15 }
+                attrs: { src: slideImg, "aspect-ratio": 16 / 9.15 },
+                on: {
+                  click: function() {
+                    _vm.imagesOpen = true
+                    _vm.imageId = i
+                  }
+                }
               })
             ],
             1
           )
         }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          model: {
+            value: _vm.imagesOpen,
+            callback: function($$v) {
+              _vm.imagesOpen = $$v
+            },
+            expression: "imagesOpen"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c(
+                "v-carousel",
+                {
+                  attrs: {
+                    cycle: "",
+                    height: "100vh",
+                    value: _vm.imageId,
+                    "hide-delimiter-background": ""
+                  }
+                },
+                _vm._l(_vm.carouselImg, function(slideImg, i) {
+                  return _c(
+                    "v-carousel-item",
+                    { key: i, staticStyle: { position: "relative" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticStyle: {
+                            position: "absolute",
+                            top: "2px",
+                            right: "2px",
+                            "z-index": "3"
+                          },
+                          attrs: { icon: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.imagesOpen = false
+                            }
+                          }
+                        },
+                        [_c("v-icon", [_vm._v("mdi-close")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("v-img", {
+                        staticClass: "portfolioImageCarousel",
+                        attrs: { src: slideImg, contain: "" },
+                        on: {
+                          click: function($event) {
+                            _vm.imagesOpen = true
+                          }
+                        }
+                      })
+                    ],
+                    1
+                  )
+                }),
+                1
+              )
+            ],
+            1
+          )
+        ],
         1
       )
     ],
@@ -42601,7 +42834,9 @@ var render = function() {
               attrs: { color: "red lighten-1", outlined: "" },
               on: {
                 click: function($event) {
-                  return _vm.$router.go(-1)
+                  return _vm.$router.push({
+                    name: "home"
+                  })
                 }
               }
             },
@@ -42610,7 +42845,7 @@ var render = function() {
                 _vm._v("\n                mdi-arrow-left\n            ")
               ]),
               _vm._v(" "),
-              _c("span", { staticClass: "mx-2" }, [_vm._v("Back")])
+              _c("span", { staticClass: "mx-2" }, [_vm._v("Home")])
             ],
             1
           ),
@@ -42625,22 +42860,119 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "my-5" }, [
-                _c(
-                  "h4",
-                  {
-                    staticClass: "portfolio-item--title text-center",
-                    style: _vm.darkTheme
-                      ? { color: _vm.darkText }
-                      : { color: _vm.lightText }
-                  },
-                  [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(_vm.portfolioData[_vm.id].title) +
-                        "\n                "
+                _c("div", { staticStyle: { position: "relative" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        position: "absolute",
+                        top: "0px",
+                        left: "0px"
+                      }
+                    },
+                    [
+                      _vm.id != 0
+                        ? _c(
+                            "v-btn",
+                            {
+                              staticStyle: {
+                                "background-color": "transparent"
+                              },
+                              attrs: { small: "", elevation: "0" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.$router.push({
+                                    name: "portfolioPage",
+                                    params: {
+                                      id: --_vm.id
+                                    }
+                                  })
+                                }
+                              }
+                            },
+                            [
+                              _c("v-icon", [
+                                _vm._v(
+                                  "\n                                mdi-arrow-left\n                            "
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        : _vm._e()
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "portfolio-item--title text-center",
+                        style: _vm.darkTheme
+                          ? { color: _vm.darkText }
+                          : { color: _vm.lightText }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(_vm.portfolioData[_vm.id].title) +
+                            " "
+                        ),
+                        _vm.portfolioData[_vm.id].inDevelopment
+                          ? _c(
+                              "span",
+                              { staticStyle: { "font-size": "50%" } },
+                              [_vm._v("(In Development)")]
+                            )
+                          : _vm._e()
+                      ]
                     )
-                  ]
-                ),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticStyle: {
+                        position: "absolute",
+                        top: "0px",
+                        right: "0px"
+                      }
+                    },
+                    [
+                      _vm.id != _vm.portfolioData.length - 1
+                        ? _c(
+                            "v-btn",
+                            {
+                              staticStyle: {
+                                "background-color": "transparent"
+                              },
+                              attrs: { small: "", elevation: "0" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.$router.push({
+                                    name: "portfolioPage",
+                                    params: {
+                                      id: ++_vm.id
+                                    }
+                                  })
+                                }
+                              }
+                            },
+                            [
+                              _c("v-icon", [
+                                _vm._v(
+                                  "\n                                mdi-arrow-right\n                            "
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        : _vm._e()
+                    ],
+                    1
+                  )
+                ]),
                 _vm._v(" "),
                 _c(
                   "p",
