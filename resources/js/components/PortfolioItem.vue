@@ -10,7 +10,7 @@
             >
                 In Development
             </v-chip> -->
-            
+
             <v-hover v-slot="{ hover }">
 
                 <div>
