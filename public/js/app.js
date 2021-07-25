@@ -1902,8 +1902,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["inDevelopment", "color", "text"]
+  props: ["inDevelopment", "color", "text", "hover"]
 });
 
 /***/ }),
@@ -1927,6 +1928,9 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
 //
 //
 //
@@ -2513,6 +2517,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2888,6 +2899,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -3011,7 +3026,7 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_2__.default.Store({
     }, {
       img: '/images/mockups/mycookinglife.png',
       title: 'MyCookingLife',
-      description: 'Sweetmeats website',
+      description: 'Pastry website',
       category: 'Web app',
       tags: ['php', 'laravel'],
       carouselImg: ['/images/mockups/mycookinglife.png', '/images/mycookinglife/1.jpg', '/images/mycookinglife/2.jpg', '/images/mycookinglife/3.jpg', '/images/mycookinglife/4.jpg', '/images/mycookinglife/5.jpg', '/images/mycookinglife/6.jpg', '/images/mycookinglife/7.jpg'],
@@ -7947,6 +7962,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "\n.v-card--reveal {\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: absolute;\r\n    bottom: 0;\r\n    /* background-color: #61DBFB75;     */\r\n    width: 100%;\n}\n.portfolio-hover-box-2 {\r\n    border-radius: 5px;\r\n    height: 10rem;\r\n    width: 18rem;\r\n\r\n    position: absolute;\r\n    z-index: -1;\r\n    bottom: -12px;\r\n    right: -12px;\n}\n.portfolio-hover-box {\r\n    height: 10rem;\r\n    width: 18rem;\r\n\r\n    border-radius: 5px;\r\n\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    text-align: center;\r\n\r\n    position: relative;\n}\n.portfolio-hover-box--title {\r\n    font-size: 1.4rem;\r\n    font-weight: lighter;\r\n    font-family: \"Source Sans Pro\", sans-serif;\n}\n.portfolio-hover-box--description {\r\n    color: rgb(140, 140, 140);\r\n    font-size: 0.95rem;\r\n    font-family: \"Source Sans Pro\", sans-serif;\n}\n.portfolio-hover-box--btn {\r\n    position: absolute;\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.v-btn[data-v-59fb76a0]::before {\r\n  background-color: transparent !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39319,6 +39358,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_style_index_1_id_59fb76a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_style_index_1_id_59fb76a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_style_index_1_id_59fb76a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css& ***!
@@ -40075,25 +40144,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _PortfolioItem_vue_vue_type_template_id_59fb76a0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PortfolioItem.vue?vue&type=template&id=59fb76a0& */ "./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&");
+/* harmony import */ var _PortfolioItem_vue_vue_type_template_id_59fb76a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PortfolioItem.vue?vue&type=template&id=59fb76a0&scoped=true& */ "./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&scoped=true&");
 /* harmony import */ var _PortfolioItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PortfolioItem.vue?vue&type=script&lang=js& */ "./resources/js/components/PortfolioItem.vue?vue&type=script&lang=js&");
 /* harmony import */ var _PortfolioItem_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PortfolioItem.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/PortfolioItem.vue?vue&type=style&index=0&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _PortfolioItem_vue_vue_type_style_index_1_id_59fb76a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css& */ "./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
 ;
 
 
+
 /* normalize component */
 
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__.default)(
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__.default)(
   _PortfolioItem_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _PortfolioItem_vue_vue_type_template_id_59fb76a0___WEBPACK_IMPORTED_MODULE_0__.render,
-  _PortfolioItem_vue_vue_type_template_id_59fb76a0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _PortfolioItem_vue_vue_type_template_id_59fb76a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _PortfolioItem_vue_vue_type_template_id_59fb76a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  null,
+  "59fb76a0",
   null
   
 )
@@ -40842,6 +40913,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css& ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_style_index_1_id_59fb76a0_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=style&index=1&id=59fb76a0&scoped=true&lang=css&");
+
+
+/***/ }),
+
 /***/ "./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css&":
 /*!**********************************************************************!*\
   !*** ./resources/js/pages/Home.vue?vue&type=style&index=0&lang=css& ***!
@@ -41038,19 +41122,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0& ***!
-  \**********************************************************************************/
+/***/ "./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&scoped=true& ***!
+  \**********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_template_id_59fb76a0___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_template_id_59fb76a0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_template_id_59fb76a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_template_id_59fb76a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_template_id_59fb76a0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PortfolioItem.vue?vue&type=template&id=59fb76a0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_PortfolioItem_vue_vue_type_template_id_59fb76a0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./PortfolioItem.vue?vue&type=template&id=59fb76a0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&scoped=true&");
 
 
 /***/ }),
@@ -41258,8 +41342,15 @@ var render = function() {
             position: "absolute",
             "z-index": "3",
             top: "-1.2rem",
-            left: "-1.4rem"
+            left: "-1.4rem",
+            transition: "all 0.2s"
           },
+          style: _vm.hover
+            ? [
+                { transform: "rotate(" + -20 + "deg)" },
+                { transition: "all 0.2s" }
+              ]
+            : "",
           attrs: { color: _vm.color }
         },
         [_vm._v("\n    " + _vm._s(_vm.text) + "\n")]
@@ -41864,10 +41955,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&":
-/*!*************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0& ***!
-  \*************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/PortfolioItem.vue?vue&type=template&id=59fb76a0&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -41888,14 +41979,6 @@ var render = function() {
         "v-card",
         { staticStyle: { border: "none !important", position: "relative" } },
         [
-          _c("ChipInDevelopment", {
-            attrs: {
-              inDevelopment: _vm.inDevelopment,
-              color: "success",
-              text: "In Development"
-            }
-          }),
-          _vm._v(" "),
           _c("v-hover", {
             scopedSlots: _vm._u([
               {
@@ -41904,215 +41987,236 @@ var render = function() {
                   var hover = ref.hover
                   return [
                     _c(
-                      "v-img",
-                      {
-                        attrs: { height: "22rem", src: _vm.img },
-                        scopedSlots: _vm._u(
-                          [
-                            {
-                              key: "placeholder",
-                              fn: function() {
-                                return [
-                                  _c("v-skeleton-loader", {
-                                    staticClass: "mx-auto",
-                                    attrs: { loading: true, type: "card" }
-                                  })
-                                ]
-                              },
-                              proxy: true
-                            }
-                          ],
-                          null,
-                          true
-                        )
-                      },
+                      "div",
                       [
+                        _c("ChipInDevelopment", {
+                          attrs: {
+                            inDevelopment: _vm.inDevelopment,
+                            color: "success",
+                            text: "In Development",
+                            hover: hover
+                          }
+                        }),
                         _vm._v(" "),
-                        _c("v-expand-transition", [
-                          hover
-                            ? _c(
-                                "div",
+                        _c(
+                          "v-img",
+                          {
+                            attrs: { height: "22rem", src: _vm.img },
+                            scopedSlots: _vm._u(
+                              [
                                 {
-                                  staticClass:
-                                    "d-flex transition-fast-in-fast-out v-card--reveal",
-                                  staticStyle: {
-                                    height: "100%",
-                                    "z-index": "0"
+                                  key: "placeholder",
+                                  fn: function() {
+                                    return [
+                                      _c("v-skeleton-loader", {
+                                        staticClass: "mx-auto",
+                                        attrs: { loading: true, type: "card" }
+                                      })
+                                    ]
                                   },
-                                  style: _vm.dark
-                                    ? { backgroundColor: "#195BDB70" }
-                                    : { backgroundColor: "#61DBFB75" }
-                                },
-                                [
-                                  _c(
+                                  proxy: true
+                                }
+                              ],
+                              null,
+                              true
+                            )
+                          },
+                          [
+                            _vm._v(" "),
+                            _c("v-expand-transition", [
+                              hover
+                                ? _c(
                                     "div",
                                     {
-                                      staticClass: "portfolio-hover-box",
+                                      staticClass:
+                                        "d-flex transition-fast-in-fast-out v-card--reveal",
+                                      staticStyle: {
+                                        height: "100%",
+                                        "z-index": "0"
+                                      },
                                       style: _vm.dark
-                                        ? { backgroundColor: _vm.darkBg }
-                                        : { backgroundColor: _vm.lightBg }
+                                        ? { backgroundColor: "#195BDB70" }
+                                        : { backgroundColor: "#61DBFB75" }
                                     },
                                     [
-                                      _c("div", {
-                                        staticClass: "portfolio-hover-box-2",
-                                        style: _vm.dark
-                                          ? { backgroundColor: _vm.darkBg2 }
-                                          : { backgroundColor: _vm.lightBg2 }
-                                      }),
-                                      _vm._v(" "),
                                       _c(
-                                        "span",
+                                        "div",
                                         {
-                                          staticClass:
-                                            "portfolio-hover-box--description mx-2 mt-1",
+                                          staticClass: "portfolio-hover-box",
                                           style: _vm.dark
-                                            ? { color: "lime" }
-                                            : { color: "forestgreen" }
+                                            ? { backgroundColor: _vm.darkBg }
+                                            : { backgroundColor: _vm.lightBg }
                                         },
                                         [
-                                          _vm._v(
-                                            "\n                                " +
-                                              _vm._s(_vm.category) +
-                                              "\n                            "
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass:
-                                            "portfolio-hover-box--title mx-2",
-                                          style: _vm.dark
-                                            ? { color: _vm.darkText }
-                                            : { color: _vm.lightText }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                " +
-                                              _vm._s(_vm.title) +
-                                              "\n                            "
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "span",
-                                        {
-                                          staticClass:
-                                            "portfolio-hover-box--description mx-2 mt-1"
-                                        },
-                                        [_vm._v(_vm._s(_vm.description))]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-chip-group",
-                                        { staticClass: "mt-4" },
-                                        _vm._l(_vm.tags, function(item, i) {
-                                          return _c(
-                                            "v-chip",
+                                          _c("div", {
+                                            staticClass:
+                                              "portfolio-hover-box-2",
+                                            style: _vm.dark
+                                              ? { backgroundColor: _vm.darkBg2 }
+                                              : {
+                                                  backgroundColor: _vm.lightBg2
+                                                }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
                                             {
-                                              key: i,
-                                              attrs: {
-                                                small: "",
-                                                ripple: false,
-                                                color: _vm.dark
-                                                  ? _vm.darkTag
-                                                  : _vm.lightTag,
-                                                "text-color": _vm.dark
-                                                  ? _vm.darkText
-                                                  : _vm.lightText
-                                              }
+                                              staticClass:
+                                                "portfolio-hover-box--description mx-2 mt-1",
+                                              style: _vm.dark
+                                                ? { color: "lime" }
+                                                : { color: "forestgreen" }
                                             },
                                             [
                                               _vm._v(
                                                 "\n                                    " +
-                                                  _vm._s(item) +
+                                                  _vm._s(_vm.category) +
                                                   "\n                                "
                                               )
                                             ]
-                                          )
-                                        }),
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c("v-hover", {
-                                        scopedSlots: _vm._u(
-                                          [
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
                                             {
-                                              key: "default",
-                                              fn: function(ref) {
-                                                var hover = ref.hover
-                                                return [
-                                                  _c(
-                                                    "v-btn",
-                                                    {
-                                                      staticStyle: {
-                                                        position: "absolute",
-                                                        bottom: "1%",
-                                                        right: "5%",
-                                                        "text-decoration":
-                                                          "none",
-                                                        transition: "all 0.3s"
-                                                      },
-                                                      style: hover
-                                                        ? {
-                                                            transform:
-                                                              "translateX(" +
-                                                              7 +
-                                                              "px)"
-                                                          }
-                                                        : "",
-                                                      attrs: {
-                                                        ripple: false,
-                                                        icon: "",
-                                                        elevation: "0",
-                                                        to: {
-                                                          name: "portfolioPage",
-                                                          params: {
-                                                            id: _vm.index
-                                                          }
-                                                        }
-                                                      }
-                                                    },
-                                                    [
+                                              staticClass:
+                                                "portfolio-hover-box--title mx-2",
+                                              style: _vm.dark
+                                                ? { color: _vm.darkText }
+                                                : { color: _vm.lightText }
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                                    " +
+                                                  _vm._s(_vm.title) +
+                                                  "\n                                "
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass:
+                                                "portfolio-hover-box--description mx-2 mt-1"
+                                            },
+                                            [_vm._v(_vm._s(_vm.description))]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-chip-group",
+                                            { staticClass: "mt-4" },
+                                            _vm._l(_vm.tags, function(item, i) {
+                                              return _c(
+                                                "v-chip",
+                                                {
+                                                  key: i,
+                                                  attrs: {
+                                                    small: "",
+                                                    ripple: false,
+                                                    color: _vm.dark
+                                                      ? _vm.darkTag
+                                                      : _vm.lightTag,
+                                                    "text-color": _vm.dark
+                                                      ? _vm.darkText
+                                                      : _vm.lightText
+                                                  }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                        " +
+                                                      _vm._s(item) +
+                                                      "\n                                    "
+                                                  )
+                                                ]
+                                              )
+                                            }),
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c("v-hover", {
+                                            scopedSlots: _vm._u(
+                                              [
+                                                {
+                                                  key: "default",
+                                                  fn: function(ref) {
+                                                    var hover = ref.hover
+                                                    return [
                                                       _c(
-                                                        "v-icon",
+                                                        "v-btn",
                                                         {
+                                                          staticStyle: {
+                                                            position:
+                                                              "absolute",
+                                                            bottom: "1%",
+                                                            right: "5%",
+                                                            "text-decoration":
+                                                              "none",
+                                                            transition:
+                                                              "all 0.3s"
+                                                          },
+                                                          style: hover
+                                                            ? {
+                                                                transform:
+                                                                  "translateX(" +
+                                                                  7 +
+                                                                  "px)"
+                                                              }
+                                                            : "",
                                                           attrs: {
-                                                            color: _vm.dark
-                                                              ? hover
-                                                                ? _vm.darkBg2
-                                                                : _vm.darkText
-                                                              : hover
-                                                              ? _vm.lightBg2
-                                                              : _vm.lightText
+                                                            ripple: false,
+                                                            icon: "",
+                                                            elevation: "0",
+                                                            to: {
+                                                              name:
+                                                                "portfolioPage",
+                                                              params: {
+                                                                id: _vm.index
+                                                              }
+                                                            }
                                                           }
                                                         },
                                                         [
-                                                          _vm._v(
-                                                            "\n                                        mdi-arrow-right\n                                    "
+                                                          _c(
+                                                            "v-icon",
+                                                            {
+                                                              attrs: {
+                                                                color: _vm.dark
+                                                                  ? hover
+                                                                    ? _vm.darkBg2
+                                                                    : _vm.darkText
+                                                                  : hover
+                                                                  ? _vm.lightBg2
+                                                                  : _vm.lightText
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                            mdi-arrow-right\n                                        "
+                                                              )
+                                                            ]
                                                           )
-                                                        ]
+                                                        ],
+                                                        1
                                                       )
-                                                    ],
-                                                    1
-                                                  )
-                                                ]
-                                              }
-                                            }
-                                          ],
-                                          null,
-                                          true
-                                        )
-                                      })
-                                    ],
-                                    1
+                                                    ]
+                                                  }
+                                                }
+                                              ],
+                                              null,
+                                              true
+                                            )
+                                          })
+                                        ],
+                                        1
+                                      )
+                                    ]
                                   )
-                                ]
-                              )
-                            : _vm._e()
-                        ])
+                                : _vm._e()
+                            ])
+                          ],
+                          1
+                        )
                       ],
                       1
                     )
@@ -42604,28 +42708,31 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "container",
-                  staticStyle: {
-                    "max-width": "50rem",
-                    "border-top": "1px solid gray"
-                  }
-                },
-                [
-                  _c("Links", {
-                    attrs: {
-                      linkLive: _vm.portfolioData[_vm.id].links.live,
-                      linkGithub: _vm.portfolioData[_vm.id].links.github,
-                      dark: _vm.darkTheme,
-                      lightText: _vm.lightText,
-                      darkText: _vm.darkText
-                    }
-                  })
-                ],
-                1
-              )
+              _vm.portfolioData[_vm.id].links.live != "" ||
+              _vm.portfolioData[_vm.id].links.github != ""
+                ? _c(
+                    "div",
+                    {
+                      staticClass: "container",
+                      staticStyle: {
+                        "max-width": "50rem",
+                        "border-top": "1px solid gray"
+                      }
+                    },
+                    [
+                      _c("Links", {
+                        attrs: {
+                          linkLive: _vm.portfolioData[_vm.id].links.live,
+                          linkGithub: _vm.portfolioData[_vm.id].links.github,
+                          dark: _vm.darkTheme,
+                          lightText: _vm.lightText,
+                          darkText: _vm.darkText
+                        }
+                      })
+                    ],
+                    1
+                  )
+                : _vm._e()
             ],
             1
           )
