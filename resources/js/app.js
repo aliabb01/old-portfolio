@@ -148,7 +148,7 @@ const store = new Vuex.Store({
                 }
             },
             {
-                img: 'https://picsum.photos/350',
+                img: '/images/mockups/finance_manager.png',
                 title: 'Finager',
                 description: 'Finance Manager app',
                 category: 'Mobile app',
@@ -157,9 +157,9 @@ const store = new Vuex.Store({
                     'react-native'
                 ],
                 carouselImg: [
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350'
+                    '/images/mockups/finance_manager.png',
+                    '/images/financeManager/1.png',
+                    '/images/financeManager/2.png',
                 ],
                 longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
                 links: {
