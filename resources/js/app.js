@@ -84,7 +84,7 @@ const store = new Vuex.Store({
             {
                 img: '/images/mockups/mycookinglife.png',
                 title: 'MyCookingLife',
-                description: 'Sweetmeats website',
+                description: 'Pastry website',
                 category: 'Web app',
                 tags: [
                     'php',
