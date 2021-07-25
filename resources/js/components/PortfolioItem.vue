@@ -11,100 +11,107 @@
                 In Development
             </v-chip> -->
 
-            <ChipInDevelopment 
-                :inDevelopment="inDevelopment"
-                color="success"
-                text="In Development"
-            />
+            
 
             <v-hover v-slot="{ hover }">
-                <!-- 22rem -->
-                <v-img
-                    height="22rem"
-                    :src="img"
-                >
-                    <!-- v-if="portfolioLoading" -->
-                    <template v-slot:placeholder>
-                        <v-skeleton-loader
-                            :loading="true"
-                            class="mx-auto"
-                            type="card"
-                            style=""
-                        ></v-skeleton-loader>
-                    </template>
-                    
-                    <v-expand-transition>
-                        <div
-                            v-if="hover"
-                            class="d-flex transition-fast-in-fast-out v-card--reveal"
-                            style="height: 100%; z-index: 0"
-                            :style="dark ? { backgroundColor: '#195BDB70' } : { backgroundColor: '#61DBFB75' }"
-                        >                            
-                            <div 
-                                class="portfolio-hover-box"
-                                :style="dark ? { backgroundColor: darkBg } : { backgroundColor: lightBg }"
-                            >
 
+                <div>
+
+                    <ChipInDevelopment 
+                        :inDevelopment="inDevelopment"
+                        color="success"
+                        text="In Development"
+                        :hover="hover"
+                    />
+
+                    <!-- 22rem -->
+                    <v-img
+                        height="22rem"
+                        :src="img"
+                    >
+                        <!-- v-if="portfolioLoading" -->
+                        <template v-slot:placeholder>
+                            <v-skeleton-loader
+                                :loading="true"
+                                class="mx-auto"
+                                type="card"
+                                style=""
+                            ></v-skeleton-loader>
+                        </template>
+                        
+                        <v-expand-transition>
+                            <div
+                                v-if="hover"
+                                class="d-flex transition-fast-in-fast-out v-card--reveal"
+                                style="height: 100%; z-index: 0"
+                                :style="dark ? { backgroundColor: '#195BDB70' } : { backgroundColor: '#61DBFB75' }"
+                            >                            
                                 <div 
-                                    class="portfolio-hover-box-2"
-                                    :style="dark ? { backgroundColor: darkBg2 } : { backgroundColor: lightBg2 }"
+                                    class="portfolio-hover-box"
+                                    :style="dark ? { backgroundColor: darkBg } : { backgroundColor: lightBg }"
                                 >
 
-                                </div>
-
-                                <!-- Category -->
-                                <span class="portfolio-hover-box--description mx-2 mt-1"
-                                    :style="dark ? { color: 'lime' } : { color: 'forestgreen' }"
-                                >
-                                    {{ category }}
-                                </span>
-
-                                <span 
-                                    class="portfolio-hover-box--title mx-2"
-                                    :style="dark ? { color: darkText } : { color: lightText }"
-                                >
-                                    {{ title }}
-                                </span>
-
-                                <span class="portfolio-hover-box--description mx-2 mt-1">{{ description }}</span>
-
-                                
-
-                                <v-chip-group class="mt-4">
-                                    <v-chip
-                                        v-for="(item, i) in tags"
-                                        :key="i"
-                                        small
-                                        :ripple="false"
-                                        :color="dark ? darkTag : lightTag"
-                                        :text-color="dark ? darkText : lightText"
+                                    <div 
+                                        class="portfolio-hover-box-2"
+                                        :style="dark ? { backgroundColor: darkBg2 } : { backgroundColor: lightBg2 }"
                                     >
-                                        {{ item }}
-                                    </v-chip>
-                                </v-chip-group>
-                                
-                                <v-hover v-slot="{ hover }">
-                                    <v-btn
-                                        :ripple="false"
-                                        icon
-                                        elevation="0"
-                                        style="position: absolute; bottom: 1%; right: 5%; text-decoration: none; transition: all 0.3s"
-                                        :style="hover ? { transform: 'translateX(' + 7 + 'px)' } : ''"
-                                        :to="{ name: 'portfolioPage', params: { id: index } }"
+
+                                    </div>
+
+                                    <!-- Category -->
+                                    <span class="portfolio-hover-box--description mx-2 mt-1"
+                                        :style="dark ? { color: 'lime' } : { color: 'forestgreen' }"
                                     >
-                                        <v-icon
-                                            :color="dark ? (hover ? darkBg2 : darkText) : (hover ? lightBg2 : lightText)"
+                                        {{ category }}
+                                    </span>
+
+                                    <span 
+                                        class="portfolio-hover-box--title mx-2"
+                                        :style="dark ? { color: darkText } : { color: lightText }"
+                                    >
+                                        {{ title }}
+                                    </span>
+
+                                    <span class="portfolio-hover-box--description mx-2 mt-1">{{ description }}</span>
+
+                                    
+
+                                    <v-chip-group class="mt-4">
+                                        <v-chip
+                                            v-for="(item, i) in tags"
+                                            :key="i"
+                                            small
+                                            :ripple="false"
+                                            :color="dark ? darkTag : lightTag"
+                                            :text-color="dark ? darkText : lightText"
                                         >
-                                            <!-- mdi-dots-horizontal -->
-                                            mdi-arrow-right
-                                        </v-icon>
-                                    </v-btn>
-                                </v-hover>
+                                            {{ item }}
+                                        </v-chip>
+                                    </v-chip-group>
+                                    
+                                    <v-hover v-slot="{ hover }">
+                                        <v-btn
+                                            :ripple="false"
+                                            icon
+                                            elevation="0"
+                                            style="position: absolute; bottom: 1%; right: 5%; text-decoration: none; transition: all 0.3s"
+                                            :style="hover ? { transform: 'translateX(' + 7 + 'px)' } : ''"
+                                            :to="{ name: 'portfolioPage', params: { id: index } }"
+                                        >
+                                            <v-icon
+                                                :color="dark ? (hover ? darkBg2 : darkText) : (hover ? lightBg2 : lightText)"
+                                            >
+                                                <!-- mdi-dots-horizontal -->
+                                                mdi-arrow-right
+                                            </v-icon>
+                                        </v-btn>
+                                    </v-hover>
 
-                            </div>                            
-                        </div>
-                    </v-expand-transition>
-                </v-img>
+                                </div>                            
+                            </div>
+                        </v-expand-transition>
+                    </v-img>
+                </div>
                 
             </v-hover>
 
@@ -202,5 +209,11 @@ export default {
 
 .portfolio-hover-box--btn {
     position: absolute;
+}
+</style>
+
+<style scoped>
+.v-btn::before {
+  background-color: transparent !important;
 }
 </style>

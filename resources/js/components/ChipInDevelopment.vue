@@ -1,8 +1,9 @@
 <template>
     <v-chip
         v-if="inDevelopment"
-        style="position: absolute; z-index: 3; top: -1.2rem; left: -1.4rem;"
+        style="position: absolute; z-index: 3; top: -1.2rem; left: -1.4rem; transition: all 0.2s"
         :color="color"
+        :style="hover ? [{ transform: 'rotate(' + -20 + 'deg)' }, { transition: 'all 0.2s' }] : ''"
     >
         {{ text }}
     </v-chip>
@@ -10,7 +11,7 @@
 
 <script>
 export default {
-    props: ["inDevelopment", "color", "text"]
+    props: ["inDevelopment", "color", "text", "hover"]
 };
 </script>
 
