@@ -54,8 +54,12 @@
                     
                 </div>
 
-                <div class="container" style="max-width: 50rem; border-top: 1px solid gray">
-                    <Links 
+                <div 
+                    v-if="portfolioData[id].links.live != '' || portfolioData[id].links.github != ''"
+                    class="container" 
+                    style="max-width: 50rem; border-top: 1px solid gray"
+                >
+                    <Links
                         :linkLive="portfolioData[id].links.live"
                         :linkGithub="portfolioData[id].links.github"
                         :dark="darkTheme"
