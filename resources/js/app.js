@@ -153,8 +153,8 @@ const store = new Vuex.Store({
                 description: 'Finance Manager app',
                 category: 'Mobile app',
                 tags: [
-                    'php',
-                    'laravel'
+                    'react',
+                    'react-native'
                 ],
                 carouselImg: [
                     'https://picsum.photos/350',
