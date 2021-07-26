@@ -75,16 +75,38 @@
                                     
 
                                     <v-chip-group class="mt-4">
-                                        <v-chip
-                                            v-for="(item, i) in tags"
-                                            :key="i"
-                                            small
-                                            :ripple="false"
-                                            :color="dark ? darkTag : lightTag"
-                                            :text-color="dark ? darkText : lightText"
+                                        <div
+                                            v-if="!moreTags"
                                         >
-                                            {{ item }}
-                                        </v-chip>
+                                            <v-chip                                            
+                                                v-for="(item, i) in tags"
+                                                :key="i"
+                                                small
+                                                :ripple="false"
+                                                :color="dark ? darkTag : lightTag"
+                                                :text-color="dark ? darkText : lightText"
+                                            >
+                                                <div class="">
+                                                    {{ item }}
+                                                </div>
+                                            </v-chip>
+                                        </div>
+
+                                        <div
+                                            v-if="moreTags"
+                                        >
+                                            <v-chip
+                                                v-for="(item, i) in selectedTags"
+                                                :key="i"
+                                                small
+                                                :ripple="false"
+                                                :color="dark ? darkTag : lightTag"
+                                                :text-color="dark ? darkText : lightText"
+                                            >
+                                                {{ item }}
+                                            </v-chip>
+                                            ...
+                                        </div>
                                     </v-chip-group>
                                     
                                     <v-hover v-slot="{ hover }">
@@ -92,7 +114,7 @@
                                             :ripple="false"
                                             icon
                                             elevation="0"
-                                            style="position: absolute; bottom: 1%; right: 5%; text-decoration: none; transition: all 0.3s"
+                                            style="position: absolute; bottom: 1%; right: 2%; text-decoration: none; transition: all 0.3s"
                                             :style="hover ? { transform: 'translateX(' + 7 + 'px)' } : ''"
                                             :to="{ name: 'portfolioPage', params: { id: index } }"
                                         >
@@ -130,6 +152,8 @@ export default {
     data() {
         return {
             portfolioLoading: true,
+            moreTags: false,
+            selectedTags: [],
 
             lightBg: themes.light.placeholder,
             darkBg: themes.dark.placeholder,
@@ -142,16 +166,24 @@ export default {
         }
     },
     mounted() {
-        const readyHandler = () => {
-            if(document.readyState == 'complete') {
-                this.portfolioLoading = false;
-                document.removeEventListener('readystatechange', readyHandler);
-            }
+        if(this.tags.length > 3) {
+            this.moreTags = true
+            this.selectedTags.push(
+                this.tags[0],
+                this.tags[1],
+                this.tags[2],
+            )
         }
+        // const readyHandler = () => {
+        //     if(document.readyState == 'complete') {
+        //         this.portfolioLoading = false;
+        //         document.removeEventListener('readystatechange', readyHandler);
+        //     }
+        // }
 
-        document.addEventListener('readystatechange', readyHandler);
+        // document.addEventListener('readystatechange', readyHandler);
         
-        readyHandler();
+        // readyHandler();
         // console.log(window)
     }
 }

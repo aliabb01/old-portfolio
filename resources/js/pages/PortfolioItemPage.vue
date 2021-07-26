@@ -78,7 +78,6 @@
                 <Carousel 
                     :carouselImg="portfolioData[id].carouselImg"
                     :startPoint="0"
-                    :darkTheme="darkTheme"
                 />                
 
                 <div class="container" style="text-align: left; max-width: 50rem">                    
