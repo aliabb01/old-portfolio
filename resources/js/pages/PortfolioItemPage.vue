@@ -55,7 +55,7 @@
                                 @click="$router.push({
                                     name: 'portfolioPage',
                                     params: {
-                                        id: ++id
+                                        id: ++id,
                                     }
                                 })"
                                 small
@@ -75,7 +75,11 @@
                     </p>
                 </div>
                 
-                <Carousel :carouselImg="portfolioData[id].carouselImg" />                
+                <Carousel 
+                    :carouselImg="portfolioData[id].carouselImg"
+                    :startPoint="0"
+                    :darkTheme="darkTheme"
+                />                
 
                 <div class="container" style="text-align: left; max-width: 50rem">                    
                     <div>

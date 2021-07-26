@@ -6,6 +6,9 @@
             class="mx-auto shadow"
             height="auto"
             hide-delimiter-background
+            progress
+            progress-color="#41A0FD"
+            v-model="startPoint"
         >
             <v-carousel-item
                 v-for="(slideImg, i) in carouselImg"
@@ -15,6 +18,7 @@
                     :src="slideImg"
                     class="portfolioImageCarousel"
                     :aspect-ratio="16/9.15"
+                    contain
                     @click="() => {imagesOpen = true; imageId=i}"
                 >
                 </v-img>
@@ -61,14 +65,13 @@
 
 <script>
 export default {
-    props: ['carouselImg'],
+    props: ['carouselImg', 'startPoint'],
     data() {
         return {
             imagesOpen: false,
             imageId: 0,
         }
     },
-
 };
 </script>
 
