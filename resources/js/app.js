@@ -63,7 +63,7 @@ const store = new Vuex.Store({
                 img: '/images/mockups/tweety.png',
                 title: 'Tweety',
                 description: 'Twitter clone',
-                category: 'Web app',
+                category: 'Website Clone',
                 tags: [
                     'php',
                     'laravel'
@@ -79,13 +79,14 @@ const store = new Vuex.Store({
                 links: {
                     github: '',
                     live: ''
-                }
+                },
+                clone: true
             },
             {
                 img: '/images/mockups/mycookinglife.png',
                 title: 'MyCookingLife',
                 description: 'Pastry website',
-                category: 'Web app',
+                category: 'Website',
                 tags: [
                     'php',
                     'laravel',
@@ -124,28 +125,30 @@ const store = new Vuex.Store({
                 longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
                 links: {
                     github: '',
-                    live: ''
+                    live: 'https://erra-vue.herokuapp.com'
                 }
             },
             {
-                img: 'https://picsum.photos/350',
-                title: 'Tweety',
-                description: 'Twitter clone',
-                category: 'Web app',
+                img: '/images/mockups/youtubeClone.png',
+                title: 'Youtube Clone',
+                description: 'YouTube clone FrontEnd',
+                category: 'Website Clone',
                 tags: [
-                    'php',
-                    'laravel'
+                    'react',
+                    'material-ui',
+                    'firebase'
                 ],
                 carouselImg: [
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350'
+                    '/images/mockups/youtubeClone.png',
+                    '/images/youtubeClone/1.jpg',
+                    '/images/youtubeClone/2.jpg',
                 ],
                 longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
                 links: {
-                    github: '',
-                    live: ''
-                }
+                    github: 'https://github.com/aliabb01/youtube-clone-visual',
+                    live: 'https://clone-b3aa4.web.app/'
+                },
+                clone: true
             },
             {
                 img: '/images/mockups/finance_manager.png',
