@@ -2522,6 +2522,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -2532,6 +2554,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       portfolioLoading: true,
+      moreTags: false,
+      selectedTags: [],
       lightBg: _themes__WEBPACK_IMPORTED_MODULE_0__.default.light.placeholder,
       darkBg: _themes__WEBPACK_IMPORTED_MODULE_0__.default.dark.placeholder,
       lightBg2: _themes__WEBPACK_IMPORTED_MODULE_0__.default.light.secondary,
@@ -2541,17 +2565,19 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   mounted: function mounted() {
-    var _this = this;
+    if (this.tags.length > 3) {
+      this.moreTags = true;
+      this.selectedTags.push(this.tags[0], this.tags[1], this.tags[2]);
+    } // const readyHandler = () => {
+    //     if(document.readyState == 'complete') {
+    //         this.portfolioLoading = false;
+    //         document.removeEventListener('readystatechange', readyHandler);
+    //     }
+    // }
+    // document.addEventListener('readystatechange', readyHandler);
+    // readyHandler();
+    // console.log(window)
 
-    var readyHandler = function readyHandler() {
-      if (document.readyState == 'complete') {
-        _this.portfolioLoading = false;
-        document.removeEventListener('readystatechange', readyHandler);
-      }
-    };
-
-    document.addEventListener('readystatechange', readyHandler);
-    readyHandler(); // console.log(window)
   }
 });
 
@@ -2629,8 +2655,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['carouselImg'],
+  props: ['carouselImg', 'startPoint'],
   data: function data() {
     return {
       imagesOpen: false,
@@ -2987,6 +3017,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 
 
 
@@ -3101,19 +3134,20 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_2__.default.Store({
       img: '/images/mockups/tweety.png',
       title: 'Tweety',
       description: 'Twitter clone',
-      category: 'Web app',
+      category: 'Website Clone',
       tags: ['php', 'laravel'],
       carouselImg: ['/images/mockups/tweety.png', '/images/tweety/tweety1.jpg', '/images/tweety/tweety2.jpg', '/images/tweety/tweety3.jpg', '/images/tweety/tweety4.jpg'],
       longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
       links: {
         github: '',
         live: ''
-      }
+      },
+      clone: true
     }, {
       img: '/images/mockups/mycookinglife.png',
       title: 'MyCookingLife',
       description: 'Pastry website',
-      category: 'Web app',
+      category: 'Website',
       tags: ['php', 'laravel'],
       carouselImg: ['/images/mockups/mycookinglife.png', '/images/mycookinglife/1.jpg', '/images/mycookinglife/2.jpg', '/images/mycookinglife/3.jpg', '/images/mycookinglife/4.jpg', '/images/mycookinglife/5.jpg', '/images/mycookinglife/6.jpg', '/images/mycookinglife/7.jpg'],
       longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
@@ -3131,20 +3165,21 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_2__.default.Store({
       longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
       links: {
         github: '',
-        live: ''
+        live: 'https://erra-vue.herokuapp.com'
       }
     }, {
-      img: 'https://picsum.photos/350',
-      title: 'Tweety',
-      description: 'Twitter clone',
-      category: 'Web app',
-      tags: ['php', 'laravel'],
-      carouselImg: ['https://picsum.photos/350', 'https://picsum.photos/350', 'https://picsum.photos/350'],
+      img: '/images/mockups/youtubeClone.png',
+      title: 'Youtube Clone',
+      description: 'YouTube clone FrontEnd',
+      category: 'Website Clone',
+      tags: ['react', 'material-ui', 'firebase'],
+      carouselImg: ['/images/mockups/youtubeClone.png', '/images/youtubeClone/1.jpg', '/images/youtubeClone/2.jpg'],
       longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
       links: {
-        github: '',
-        live: ''
-      }
+        github: 'https://github.com/aliabb01/youtube-clone-visual',
+        live: 'https://clone-b3aa4.web.app/'
+      },
+      clone: true
     }, {
       img: '/images/mockups/finance_manager.png',
       title: 'Finager',
@@ -8047,7 +8082,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.v-card--reveal {\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: absolute;\r\n    bottom: 0;\r\n    /* background-color: #61DBFB75;     */\r\n    width: 100%;\n}\n.portfolio-hover-box-2 {\r\n    border-radius: 5px;\r\n    height: 10rem;\r\n    width: 18rem;\r\n\r\n    position: absolute;\r\n    z-index: -1;\r\n    bottom: -12px;\r\n    right: -12px;\n}\n.portfolio-hover-box {\r\n    height: 10rem;\r\n    width: 18rem;\r\n\r\n    border-radius: 5px;\r\n\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    text-align: center;\r\n\r\n    position: relative;\n}\n.portfolio-hover-box--title {\r\n    font-size: 1.4rem;\r\n    font-weight: lighter;\r\n    font-family: \"Source Sans Pro\", sans-serif;\n}\n.portfolio-hover-box--description {\r\n    color: rgb(140, 140, 140);\r\n    font-size: 0.95rem;\r\n    font-family: \"Source Sans Pro\", sans-serif;\n}\n.portfolio-hover-box--btn {\r\n    position: absolute;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.v-card--reveal {\r\n    align-items: center;\r\n    justify-content: center;\r\n    position: absolute;\r\n    bottom: 0;\r\n    /* background-color: #61DBFB75;     */\r\n    width: 100%;\n}\n.portfolio-hover-box-2 {\r\n    border-radius: 5px;\r\n    height: 10rem;\r\n    width: 18rem;\r\n\r\n    position: absolute;\r\n    z-index: -1;\r\n    bottom: -12px;\r\n    right: -12px;\n}\n.portfolio-hover-box {\r\n    height: 12rem;\r\n    width: 18rem;\r\n\r\n    border-radius: 5px;\r\n\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    text-align: center;\r\n\r\n    position: relative;\n}\n.portfolio-hover-box--title {\r\n    font-size: 1.4rem;\r\n    font-weight: lighter;\r\n    font-family: \"Source Sans Pro\", sans-serif;\n}\n.portfolio-hover-box--description {\r\n    color: rgb(140, 140, 140);\r\n    font-size: 0.95rem;\r\n    font-family: \"Source Sans Pro\", sans-serif;\n}\n.portfolio-hover-box--btn {\r\n    position: absolute;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -42261,32 +42296,84 @@ var render = function() {
                                           _c(
                                             "v-chip-group",
                                             { staticClass: "mt-4" },
-                                            _vm._l(_vm.tags, function(item, i) {
-                                              return _c(
-                                                "v-chip",
-                                                {
-                                                  key: i,
-                                                  attrs: {
-                                                    small: "",
-                                                    ripple: false,
-                                                    color: _vm.dark
-                                                      ? _vm.darkTag
-                                                      : _vm.lightTag,
-                                                    "text-color": _vm.dark
-                                                      ? _vm.darkText
-                                                      : _vm.lightText
-                                                  }
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "\n                                        " +
-                                                      _vm._s(item) +
-                                                      "\n                                    "
+                                            [
+                                              !_vm.moreTags
+                                                ? _c(
+                                                    "div",
+                                                    _vm._l(_vm.tags, function(
+                                                      item,
+                                                      i
+                                                    ) {
+                                                      return _c(
+                                                        "v-chip",
+                                                        {
+                                                          key: i,
+                                                          attrs: {
+                                                            small: "",
+                                                            ripple: false,
+                                                            color: _vm.dark
+                                                              ? _vm.darkTag
+                                                              : _vm.lightTag,
+                                                            "text-color": _vm.dark
+                                                              ? _vm.darkText
+                                                              : _vm.lightText
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("div", {}, [
+                                                            _vm._v(
+                                                              "\n                                                " +
+                                                                _vm._s(item) +
+                                                                "\n                                            "
+                                                            )
+                                                          ])
+                                                        ]
+                                                      )
+                                                    }),
+                                                    1
                                                   )
-                                                ]
-                                              )
-                                            }),
-                                            1
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              _vm.moreTags
+                                                ? _c(
+                                                    "div",
+                                                    [
+                                                      _vm._l(
+                                                        _vm.selectedTags,
+                                                        function(item, i) {
+                                                          return _c(
+                                                            "v-chip",
+                                                            {
+                                                              key: i,
+                                                              attrs: {
+                                                                small: "",
+                                                                ripple: false,
+                                                                color: _vm.dark
+                                                                  ? _vm.darkTag
+                                                                  : _vm.lightTag,
+                                                                "text-color": _vm.dark
+                                                                  ? _vm.darkText
+                                                                  : _vm.lightText
+                                                              }
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                            " +
+                                                                  _vm._s(item) +
+                                                                  "\n                                        "
+                                                              )
+                                                            ]
+                                                          )
+                                                        }
+                                                      ),
+                                                      _vm._v(
+                                                        "\n                                        ...\n                                    "
+                                                      )
+                                                    ],
+                                                    2
+                                                  )
+                                                : _vm._e()
+                                            ]
                                           ),
                                           _vm._v(" "),
                                           _c("v-hover", {
@@ -42304,7 +42391,7 @@ var render = function() {
                                                             position:
                                                               "absolute",
                                                             bottom: "1%",
-                                                            right: "5%",
+                                                            right: "2%",
                                                             "text-decoration":
                                                               "none",
                                                             transition:
@@ -42419,7 +42506,20 @@ var render = function() {
         {
           staticClass: "mx-auto shadow",
           staticStyle: { width: "50rem", "border-radius": "30px" },
-          attrs: { cycle: "", height: "auto", "hide-delimiter-background": "" }
+          attrs: {
+            cycle: "",
+            height: "auto",
+            "hide-delimiter-background": "",
+            progress: "",
+            "progress-color": "#41A0FD"
+          },
+          model: {
+            value: _vm.startPoint,
+            callback: function($$v) {
+              _vm.startPoint = $$v
+            },
+            expression: "startPoint"
+          }
         },
         _vm._l(_vm.carouselImg, function(slideImg, i) {
           return _c(
@@ -42428,7 +42528,11 @@ var render = function() {
             [
               _c("v-img", {
                 staticClass: "portfolioImageCarousel",
-                attrs: { src: slideImg, "aspect-ratio": 16 / 9.15 },
+                attrs: {
+                  src: slideImg,
+                  "aspect-ratio": 16 / 9.15,
+                  contain: ""
+                },
                 on: {
                   click: function() {
                     _vm.imagesOpen = true
@@ -42993,7 +43097,10 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("Carousel", {
-                attrs: { carouselImg: _vm.portfolioData[_vm.id].carouselImg }
+                attrs: {
+                  carouselImg: _vm.portfolioData[_vm.id].carouselImg,
+                  startPoint: 0
+                }
               }),
               _vm._v(" "),
               _c(
