@@ -9,7 +9,7 @@
             <v-sheet
                 :style="darkTheme ? { backgroundColor: darkDescriptionBg } : { backgroundColor: lightDescriptionBg }"
                 color="#e5e5e5"
-                class="rounded-xl"                
+                class="rounded-xl mx-3"
                 elevation="3"
                 height="200"
                 width="500"

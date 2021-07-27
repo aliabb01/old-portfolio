@@ -44,6 +44,6 @@ export default {
     /* color: white ; */
     font-size: 1rem;
     text-transform: none;
-    /* font-family: 'Source Sans Pro', sans-serif;     */
+    font-family: 'Source Sans Pro', sans-serif;
 }
 </style>

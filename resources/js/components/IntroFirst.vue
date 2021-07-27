@@ -1,10 +1,10 @@
 <template>
     <div style="" class="d-flex flex-column justify-content-center">
+
         <IntroAvatar />
         <IntroDescription />
         <IntroButton class="mt-10" />
 
-        
         <br>        
 
         <IntroSocialLinks />

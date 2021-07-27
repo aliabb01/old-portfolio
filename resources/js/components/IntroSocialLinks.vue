@@ -4,37 +4,42 @@
             :dark="darkTheme ? true : false"
         ></v-divider>
 
-        <span class="find-me"
-            :style="darkTheme ? { color: darkTextLabel } : { color: lightTextLabel }"
+        <div 
+            class="container-xs mx-15 pt-5 rounded-xl elevation-3"
+            :style="darkTheme ? { backgroundColor: darkPlaceholder } : { backgroundColor: ligthPlaceholder }"
         >
-            Find me here :
-        </span>
-        
-        <v-row class="mt-5">
-            <v-col>
-                <a class="socialLinks" target="blank" title="Github profile" href="https://github.com/aliabb01">
-                    <v-icon
-                        :color="darkTheme ? darkIconColor : lightIconColor"
-                        size="50"                        
-                    >
-                        mdi-github-circle
-                    </v-icon>
-                </a>
-            </v-col>
-            <v-col>
-                <a class="socialLinks" target="blank" title="Stackoverflow profile" href="https://stackoverflow.com/users/12312519/ali-abbasov?tab=profile">
-                    <v-icon
-                        :color="darkTheme ? darkIconColor : lightIconColor"
-                        size="50"                        
-                    >
-                        mdi-stack-overflow
-                    </v-icon>
-                </a>
-            </v-col>
-            <v-col>
-                <a href="https://github.com/aliabb01"></a>
-            </v-col>
-        </v-row>
+            <span class="find-me"
+                :style="darkTheme ? { color: darkTextLabel } : { color: lightTextLabel }"
+            >
+                Find me here :
+            </span>
+            
+            <v-row class="mt-5">
+                <v-col>
+                    <a class="socialLinks" target="blank" title="Github profile" href="https://github.com/aliabb01">
+                        <v-icon
+                            :color="darkTheme ? darkTextLabel : lightTextLabel"
+                            size="50"                        
+                        >
+                            mdi-github-circle
+                        </v-icon>
+                    </a>
+                </v-col>
+                <v-col>
+                    <a class="socialLinks" target="blank" title="Stackoverflow profile" href="https://stackoverflow.com/users/12312519/ali-abbasov?tab=profile">
+                        <v-icon
+                            :color="darkTheme ? darkTextLabel : lightTextLabel"
+                            size="50"                        
+                        >
+                            mdi-stack-overflow
+                        </v-icon>
+                    </a>
+                </v-col>
+                <v-col>
+                    <a href="https://github.com/aliabb01"></a>
+                </v-col>
+            </v-row>
+        </div>
     </div>
 </template>
 
@@ -47,7 +52,9 @@ export default {
             lightTextLabel: themes.light.text,
             darkTextLabel: themes.dark.text,
             lightIconColor: themes.light.secondary,
-            darkIconColor: themes.dark.secondary
+            darkIconColor: themes.dark.secondary,
+            ligthPlaceholder: themes.light.placeholder,
+            darkPlaceholder: themes.dark.placeholder
         }
     },
     computed: {
