@@ -2,7 +2,25 @@
 <!-- home-main -->
     <main>
         <div>
-            <v-row class="" style="height: 100%">
+            <vue-particles
+                :color="darkTheme ? '#000000' : '#ffffff'"
+                :particleOpacity="1"
+                :particlesNumber="15"
+                shapeType="circle"
+                :particleSize="4"
+                :linesColor="darkTheme ? '#000000' : '#ffffff'"
+                :linesWidth="1"
+                :lineLinked="true"
+                :lineOpacity="0.4"
+                :linesDistance="150"
+                :moveSpeed="2"
+                :hoverEffect="true"
+                hoverMode="repulse"
+                :clickEffect="true"
+                clickMode="repulse"
+            >
+            </vue-particles>
+            <v-row class="" style="height: 100%;">
                 <v-col md="6" class="text-center div1 py-15">
                     <IntroFirst />
                 </v-col>
@@ -13,7 +31,6 @@
                     <IntroSecond />
                 </v-col>               
             </v-row>
-
         </div>
 
         <div class="portfolio-cont my-15">
@@ -38,7 +55,7 @@ export default {
             lightFirst: themes.light.primary,
             darkFirst: themes.dark.primary,
             ligthSecond: themes.light.secondary,
-            darkSecond: themes.dark.secondary
+            darkSecond: themes.dark.secondary,
         }
     },
     computed: {
@@ -62,16 +79,19 @@ export default {
     align-items: center;
 }
 
-/* .div1 {
-    background-color: black;
-} */
+.div1 {
+    z-index: 5;
+}
 
 .div2 {
     border-bottom-left-radius: 100px;
+    z-index: 3;
 }
 
-.portfolio-cont {
-    /* background-image: url('/images/portfolio_cont_bg.svg');
-    background-size: cover; */
+#particles-js {
+    position : absolute;
+    width:50%;
+    height:89vh;
+    z-index: 4;
 }
 </style>
