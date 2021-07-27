@@ -11,7 +11,7 @@ window.Vue = require('vue').default;
 import VueRouter from "vue-router";
 import router from "./routes";
 import vuetify from './vuetify';
-
+import VueParticles from 'vue-particles'
 import Vuex from "vuex";
 
 const store = new Vuex.Store({
@@ -131,7 +131,7 @@ const store = new Vuex.Store({
             {
                 img: '/images/mockups/youtubeClone.png',
                 title: 'Youtube Clone',
-                description: 'YouTube clone FrontEnd',
+                description: 'YouTube FrontEnd clone',
                 category: 'Website Clone',
                 tags: [
                     'react',
@@ -180,7 +180,7 @@ const store = new Vuex.Store({
     }
 });
 
-Vue.use(VueRouter).use(store);
+Vue.use(VueRouter).use(store).use(VueParticles);
 
 
 /**
