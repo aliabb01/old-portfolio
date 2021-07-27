@@ -17,11 +17,13 @@
             </div>
             <div style="display: flex;" >
                 
-                <!-- Writing :value instead of v-model removes console error (no setter) -->
+                <!-- Writing :value instead of v-model removes console error (no setter)
+                    But on refresh the switch is incorrect
+                -->
                 <v-switch
                     inset
                     color="yellow"
-                    :value="darkTheme"
+                    v-model="theme"
                     @click="toggleTheme(darkTheme)"
                 >
                 </v-switch>
@@ -55,7 +57,17 @@ export default {
         }
     },
     computed: {
-        ...mapState(["darkTheme"])
+        ...mapState(["darkTheme"]),
+
+        // getter and setter (latter fixes no setter issue)
+        theme: {
+            get() {
+                return this.darkTheme
+            },
+            set(value) {
+                return value
+            }
+        }
     },
     methods: {
         ...mapMutations(["toggleTheme"])
