@@ -17,11 +17,11 @@
             </div>
             <div style="display: flex;" >
                 
-                
+                <!-- Writing :value instead of v-model removes console error (no setter) -->
                 <v-switch
                     inset
                     color="yellow"
-                    v-model="darkTheme"
+                    :value="darkTheme"
                     @click="toggleTheme(darkTheme)"
                 >
                 </v-switch>
