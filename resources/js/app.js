@@ -131,7 +131,7 @@ const store = new Vuex.Store({
             {
                 img: '/images/mockups/youtubeClone.png',
                 title: 'Youtube Clone',
-                description: 'YouTube FrontEnd clone',
+                description: 'YouTube Frontend clone',
                 category: 'Website Clone',
                 tags: [
                     'react',
@@ -147,6 +147,28 @@ const store = new Vuex.Store({
                 links: {
                     github: 'https://github.com/aliabb01/youtube-clone-visual',
                     live: 'https://clone-b3aa4.web.app/'
+                },
+                clone: true
+            },
+            {
+                img: '/images/mockups/youtubeClone.png',
+                title: 'Facebook Clone',
+                description: 'Facebook Frontend clone',
+                category: 'Website Clone',
+                tags: [
+                    'react',
+                    'material-ui',
+                    'firebase'
+                ],
+                carouselImg: [
+                    '/images/mockups/youtubeClone.png',
+                    '/images/youtubeClone/1.jpg',
+                    '/images/youtubeClone/2.jpg',
+                ],
+                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+                links: {
+                    github: 'https://github.com/aliabb01/facebook-clone',
+                    live: 'https://facebook-clone-e3631.web.app/'
                 },
                 clone: true
             },
