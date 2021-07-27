@@ -175,7 +175,23 @@ const store = new Vuex.Store({
     },
     mutations: {
         toggleTheme(state) {
-            state.darkTheme = !state.darkTheme
+            state.darkTheme = !state.darkTheme;
+            if(state.darkTheme) {
+                localStorage.setItem('darkTheme', true);
+            }
+            else {
+                localStorage.removeItem('darkTheme')
+            }
+        },
+        initialiseStore(state) {
+            if(localStorage.getItem('darkTheme')) {
+                state.darkTheme = true;
+                // console.log("Theme preference:", state.darkTheme ? 'DARK' : 'LIGHT')
+            }
+            else {
+                state.darkTheme = false;
+                // console.log("Theme preference:", state.darkTheme ? 'DARK' : 'LIGHT')
+            }
         }
     }
 });

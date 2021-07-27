@@ -21,6 +21,9 @@ export default {
     },
     computed: {
         ...mapState(["darkTheme"])
+    },
+    beforeCreate() {
+        this.$store.commit('initialiseStore')
     }
 }
 </script>
