@@ -39,26 +39,26 @@ const store = new Vuex.Store({
                     live: ''
                 }
             },
-            {
-                img: 'https://picsum.photos/350',
-                title: 'RMS',
-                description: 'Restaurant Management System',
-                category: 'Web app',
-                tags: [
-                    'php',
-                    'laravel'
-                ],
-                carouselImg: [
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350',
-                    'https://picsum.photos/350'
-                ],
-                longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
-                links: {
-                    github: '',
-                    live: ''
-                }
-            },
+            // {
+            //     img: 'https://picsum.photos/350',
+            //     title: 'RMS',
+            //     description: 'Restaurant Management System',
+            //     category: 'Web app',
+            //     tags: [
+            //         'php',
+            //         'laravel'
+            //     ],
+            //     carouselImg: [
+            //         'https://picsum.photos/350',
+            //         'https://picsum.photos/350',
+            //         'https://picsum.photos/350'
+            //     ],
+            //     longDescription: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam magni, odio ea vel excepturi dignissimos veniam voluptatem voluptatibus quasi ullam?',
+            //     links: {
+            //         github: '',
+            //         live: ''
+            //     }
+            // },
             {
                 img: '/images/mockups/tweety.png',
                 title: 'Tweety',
