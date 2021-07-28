@@ -19,6 +19,7 @@
 
         <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">   
 
+        <!-- Favicon -->
         <link rel="shortcut icon" href="/images/logo.svg" type="image/x-icon">
         
     </head>

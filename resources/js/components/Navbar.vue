@@ -48,7 +48,7 @@ import { mapState, mapMutations } from 'vuex';
 export default {
     data() {
         return {
-            darkMode: false,
+            // darkMode: false,
             lightNavbar: themes.light.secondary,
             darkNavbar: themes.dark.secondary
             // darkNavbar: {

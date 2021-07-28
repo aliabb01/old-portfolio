@@ -3,12 +3,12 @@
     <main>
         <div>
             <vue-particles
-                :color="darkTheme ? '#000000' : '#ffffff'"
+                color="#1E90FF"
                 :particleOpacity="1"
                 :particlesNumber="15"
                 shapeType="circle"
                 :particleSize="4"
-                :linesColor="darkTheme ? '#000000' : '#ffffff'"
+                linesColor="#1E90FF"
                 :linesWidth="1"
                 :lineLinked="true"
                 :lineOpacity="0.4"
@@ -59,7 +59,7 @@ export default {
         }
     },
     computed: {
-        ...mapState(["darkTheme"])
+        ...mapState(["darkTheme"]),
     },
 }
 </script>
