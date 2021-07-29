@@ -60,6 +60,8 @@
                 </v-icon>
             </v-btn> -->
 
+            <transition-group name="portfolioBox" class="row justify-content-around">
+
                 <v-col
                     v-for="(item, i) in resultSort"
                     :key="item.id"
@@ -82,7 +84,9 @@
                         :darkText="darkText"
                     />
                 </v-col>
-            </div>
+
+            </transition-group>
+
         </div>
     </section>
 </template>
@@ -132,5 +136,9 @@ export default {
     font-size: 1.8rem;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 500;
+}
+
+.portfolioBox-move {
+  transition: all 0.5s;
 }
 </style>
