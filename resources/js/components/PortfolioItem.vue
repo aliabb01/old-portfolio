@@ -1,7 +1,8 @@
 <template>
-    <div class="">        
+    <div class="">
         <v-card
             style="border: none !important; position: relative;"
+            :dark="dark"
         >
             <!-- <v-chip 
                 v-if="inDevelopment"
@@ -22,6 +23,13 @@
                         :hover="hover"
                     />
 
+                    <ChipFeatured
+                        :featured="featured"
+                        color="red lighten-2"
+                        text="Featured Work"
+                        :hover="hover"
+                    />
+
                     <!-- 22rem -->
                     <v-img
                         height="22rem"
@@ -33,6 +41,7 @@
                                 :loading="true"
                                 class="mx-auto"
                                 type="card"
+                                :dark="dark"
                                 style=""
                             ></v-skeleton-loader>
                         </template>
@@ -135,20 +144,18 @@
                 
             </v-hover>
 
-            
-            <!-- {{ title }} -->
-           
         </v-card>
     </div>
 </template>
 
 <script>
 import themes from '../themes';
-import ChipInDevelopment from './ChipInDevelopment';
+import ChipInDevelopment from './ChipInDevelopment.vue';
+import ChipFeatured from './ChipFeatured.vue';
 
 export default {
-    props: ["img", "title", "description", "category", "tags", "inDevelopment", "index", "dark", "lightText", "darkText"],
-    components: { ChipInDevelopment },
+    props: ["img", "title", "description", "category", "tags", "inDevelopment", "featured", "index", "dark", "lightText", "darkText"],
+    components: { ChipInDevelopment, ChipFeatured },
     data() {
         return {
             portfolioLoading: true,
@@ -162,7 +169,7 @@ export default {
             darkBg2: themes.dark.secondary,
 
             lightTag: themes.light.tag,
-            darkTag: themes.dark.tag
+            darkTag: themes.dark.tag,
         }
     },
     mounted() {
@@ -174,17 +181,6 @@ export default {
                 this.tags[2],
             )
         }
-        // const readyHandler = () => {
-        //     if(document.readyState == 'complete') {
-        //         this.portfolioLoading = false;
-        //         document.removeEventListener('readystatechange', readyHandler);
-        //     }
-        // }
-
-        // document.addEventListener('readystatechange', readyHandler);
-        
-        // readyHandler();
-        // console.log(window)
     }
 }
 </script>
