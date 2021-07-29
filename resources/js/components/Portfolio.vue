@@ -61,8 +61,8 @@
             </v-btn> -->
 
                 <v-col
-                    v-for="(item, i) in portfolioData"
-                    :key="i"
+                    v-for="(item, i) in resultSort"
+                    :key="item.id"
                     class="my-5"
                     lg="4"
                     md="6"
@@ -75,6 +75,7 @@
                         :category="item.category"
                         :tags="item.tags"
                         :inDevelopment="item.inDevelopment"
+                        :featured="item.featured"
                         :index="i"                        
                         :dark="darkTheme"
                         :lightText="lightText"
@@ -104,7 +105,19 @@ export default {
         }
     },
     computed: {
-        ...mapState(["darkTheme", "portfolioData"])
+        ...mapState(["darkTheme", "portfolioData"]),
+
+        resultSort() {
+            if(this.sortPortfolio == 0) {
+                return this.portfolioData.sort((x,y) => x.id - y.id)
+            }
+            if(this.sortPortfolio == 1) {
+                return this.portfolioData.sort((x,y) => y.featured - x.featured)
+            }
+            if(this.sortPortfolio == 2) {
+                return this.portfolioData.sort((x,y) => y.inDevelopment - x.inDevelopment)
+            }
+        }
     },
     
 }
