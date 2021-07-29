@@ -35,7 +35,9 @@
                                 elevation="0"
                                 style="background-color: transparent"
                             >
-                                <v-icon>
+                                <v-icon
+                                    :color="darkTheme ? darkText : lightText"
+                                >
                                     mdi-arrow-left
                                 </v-icon>
                             </v-btn>
@@ -62,7 +64,9 @@
                                 elevation="0"
                                 style="background-color: transparent"
                             >
-                                <v-icon>
+                                <v-icon
+                                    :color="darkTheme ? darkText : lightText"
+                                >
                                     mdi-arrow-right
                                 </v-icon>
                             </v-btn>
