@@ -7,7 +7,59 @@
         </div>
 
         <div class="container">
-            <div class="row justify-content-around">
+
+            <div class="d-flex mb-5">
+                <v-btn
+                    icon
+                    color="#ffffff"
+                    style="color: gray; background-color: white; text-transform: none;"
+                    x-large
+                    @click="sortMenuOpen = !sortMenuOpen"
+                >
+                    <v-icon>
+                        mdi-sort
+                    </v-icon>
+                </v-btn>
+
+                <v-scroll-x-transition>
+                    <v-radio-group
+                        v-if="sortMenuOpen"
+                        row
+                        style="font-family: 'Source Sans Pro', sans-serif;"
+                        v-model="sortPortfolio"
+                        mandatory
+                        class="my-2 ml-5"
+                    >
+
+                        <v-radio
+                            label="Default"
+                            :dark="darkTheme"
+                        >
+                        </v-radio>
+
+                        <v-radio
+                            label="Featured"
+                            :dark="darkTheme"
+                        >
+                        </v-radio>
+
+                        <v-radio
+                            label="In Development"
+                            :dark="darkTheme"
+                        >
+                        </v-radio>
+                    </v-radio-group>
+                </v-scroll-x-transition>
+            </div>
+
+            <!-- <v-btn
+                icon
+            >
+                <v-icon>
+                    mdi-sort
+                </v-icon>
+            </v-btn> -->
+
                 <v-col
                     v-for="(item, i) in portfolioData"
                     :key="i"
@@ -16,7 +68,7 @@
                     md="6"
                     sm="12"
                 >
-                    <PortfolioItem 
+                    <PortfolioItem
                         :img="item.img"
                         :title="item.title"
                         :description="item.description"
@@ -46,8 +98,9 @@ export default {
         return {
             lightText: themes.light.text,
             darkText: themes.dark.text,
-            // portfolioLoading: true,
             
+            sortPortfolio: 0,
+            sortMenuOpen: false,
         }
     },
     computed: {
