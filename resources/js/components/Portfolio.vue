@@ -4,6 +4,15 @@
             <span class="portfolio-heading-label"
                 :style="darkTheme ? {color: darkText } : { color: lightText }"
             >Portfolio</span>
+
+            <div class="d-flex justify-content-center mt-5">
+                <div
+                    style="height: 0.3rem; width: 3rem; border-radius: 30px;"
+                    :style="darkTheme ? { backgroundColor: darkSort } : { backgroundColor: lightSort }"
+                >
+                    
+                </div>
+            </div>
         </div>
 
         <div class="container">
@@ -11,8 +20,8 @@
             <div class="d-flex mb-5">
                 <v-btn
                     icon
-                    color="#ffffff"
-                    style="color: gray; background-color: white; text-transform: none;"
+                    :color="darkTheme ? darkSort : lightSort"
+                    
                     x-large
                     @click="sortMenuOpen = !sortMenuOpen"
                 >
@@ -103,6 +112,9 @@ export default {
         return {
             lightText: themes.light.text,
             darkText: themes.dark.text,
+
+            lightSort: themes.light.secondary,
+            darkSort: themes.dark.secondary,
             
             sortPortfolio: 0,
             sortMenuOpen: false,
