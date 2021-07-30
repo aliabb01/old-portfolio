@@ -20,6 +20,7 @@
                 clickMode="repulse"
             >
             </vue-particles>
+
             <v-row class="" style="height: 100%;">
                 <v-col md="6" class="text-center div1 py-15">
                     <IntroFirst />
@@ -36,6 +37,10 @@
         <div class="portfolio-cont my-15">
             <Portfolio />
         </div>
+
+        <div class="">
+            <Tech />
+        </div>
               
     </main>
 </template>
@@ -44,12 +49,13 @@
 import IntroFirst from '../components/IntroFirst.vue';
 import IntroSecond from '../components/IntroSecond.vue';
 import Portfolio from '../components/Portfolio.vue';
+import Tech from '../components/Tech.vue';
 
 import themes from '../themes';
 import { mapState } from 'vuex';
 
 export default {
-    components: { IntroFirst, IntroSecond, Portfolio },
+    components: { IntroFirst, IntroSecond, Portfolio, Tech },
     data() {
         return {
             lightFirst: themes.light.primary,
