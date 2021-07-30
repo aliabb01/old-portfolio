@@ -15,11 +15,13 @@ import VueParticles from 'vue-particles'
 import Vuex from "vuex";
 
 import portfolioD from './portfolioData';
+import techD from './techData';
 
 const store = new Vuex.Store({
     state: {
         darkTheme: false,
-        portfolioData: portfolioD
+        portfolioData: portfolioD,
+        techData: techD
     },
     mutations: {
         toggleTheme(state) {
