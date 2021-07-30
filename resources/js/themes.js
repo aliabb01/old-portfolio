@@ -9,6 +9,7 @@ const themes =  {
         tag: 'gray'
     },
     dark: {
+        //#082032
         primary: '#1F1926',
         secondary: 'rgb(25, 91, 219)',
         secondaryLight: 'rgba(25, 91, 219, 0.4)', // facebook dark mode button color
