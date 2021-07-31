@@ -151,6 +151,6 @@ export default {
 }
 
 .portfolioBox-move {
-  transition: all 0.5s;
+    transition: all 0.5s;
 }
 </style>
