@@ -42,7 +42,7 @@ export default {
 .get-in-touch {
     /* color: #1859dc; */
     /* color: white ; */
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: none;
     font-family: 'Source Sans Pro', sans-serif;
 }

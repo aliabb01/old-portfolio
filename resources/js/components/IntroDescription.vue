@@ -41,8 +41,6 @@ export default {
 </script>
 
 <style>
-
-
 .description-label {
     font-size: 2.7rem;
     font-family: 'Source Sans Pro', sans-serif;

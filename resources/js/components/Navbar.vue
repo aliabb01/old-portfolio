@@ -79,8 +79,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,700&display=swap");
-
 .navbar {
     padding-top: 1.0rem;
     padding-bottom: 1.0rem;
@@ -103,7 +101,7 @@ export default {
     font-size: 1.4rem;
     font-family: "Source Sans Pro", sans-serif;
     font-style: italic;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .navlink:hover {
