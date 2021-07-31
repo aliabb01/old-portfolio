@@ -3,17 +3,18 @@
     <v-hover v-slot="{ hover }">
         <div class="col-4 d-flex flex-column justify-content-center align-items-center techBox rounded-lg"
             :style="'background-color:' + (darkTheme ? (hover ? darkHover : '') : (hover ? lightHover : ''))"
+            @mouseover="toggleSelected(index)"
+            @click="scrollUp('techInfoContainer')"
         >
             <v-img 
                 :src="imgSrc"
                 max-width="5rem"
-                :style="hover ? '' : { filter: 'contrast(60%)' }"
-                
+                :style="hover ? '' : { filter: 'grayscale(100%)' }"
             >
             </v-img>
 
             <span 
-                class="techItemTitle"
+                class="techItemTitle mt-2"
                 :style="darkTheme ? { color: darkText } : { lightText }"
             >
                 {{ title }}
@@ -24,10 +25,10 @@
 
 <script>
 import themes from '../themes';
-import { mapState } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
-    props: ["imgSrc", "title"],
+    props: ["imgSrc", "title", "index"],
     data() {
         return {
             lightHover: '#61DBFB75',
@@ -38,8 +39,18 @@ export default {
         }
     },
     computed: {
-        ...mapState(["darkTheme"]),
+        ...mapState(["darkTheme", "selectedTech"]),
     },
+    methods: {
+        ...mapMutations(["toggleSelected"]),
+
+        scrollUp(id) {
+            document.getElementById(id).scrollIntoView({
+                behavior: 'smooth'
+            });
+            console.log("Scrolled");
+        }
+    }
 }
 </script>
 
