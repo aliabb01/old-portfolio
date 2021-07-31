@@ -21,6 +21,7 @@ const store = new Vuex.Store({
     state: {
         darkTheme: false,
         portfolioData: portfolioD,
+        selectedTech: 0,
         techData: techD
     },
     mutations: {
@@ -32,6 +33,9 @@ const store = new Vuex.Store({
             else {
                 localStorage.removeItem('darkTheme')
             }
+        },
+        toggleSelected(state, index) {
+            state.selectedTech = index;
         },
         initialiseStore(state) {
             if(localStorage.getItem('darkTheme')) {

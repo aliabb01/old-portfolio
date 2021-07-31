@@ -1,23 +1,59 @@
 const techData = [
     {
         id: 1,
+        imgSrc: '/images/techlogos/html.svg',
         name: 'HTML',
-        description: "Some description"
+        // shortDescription: 'Skeleton of the web',
+        description: "The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript",
+        // experience: Math.ceil(Date.now() - new Date("07/31/2021"))
     },
     {
         id: 2,
+        imgSrc: '/images/techlogos/css.svg',
         name: 'CSS',
-        description: "Some description"
+        description: "Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript"
     },
     {
         id: 3,
+        imgSrc: '/images/techlogos/bootstrap.svg',
         name: 'Bootstrap',
-        description: 'Bootstrap description'
+        description: 'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components'
     },
     {
         id: 4,
+        imgSrc: '/images/techlogos/js.svg',
         name: 'JavaScript',
-        description: 'JS desc'
+        description: 'JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive. Where HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages interactive elements that engage a user'
+    },
+    {
+        id: 5,
+        imgSrc: '/images/techlogos/jquery.svg',
+        name: 'jQuery',
+        description: 'jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax'
+    },
+    {
+        id: 6,
+        imgSrc: '/images/techlogos/laravel.svg',
+        name: 'Laravel',
+        description: 'Laravel is a free, open-source PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern'
+    },
+    {
+        id: 7,
+        imgSrc: '/images/techlogos/vue.svg',
+        name: 'Vue',
+        description: 'Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications'
+    },
+    {
+        id: 8,
+        imgSrc: '/images/techlogos/react.svg',
+        name: 'React',
+        description: 'React is a free and open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications'
+    },
+    {
+        id: 9,
+        imgSrc: '/images/techlogos/figma.svg',
+        name: 'Figma',
+        description: 'Figma is a web-based graphics editing and user interface design app. It can be used to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, prototyping designs, crafting social media posts, and everything in between'
     }
 ];
 
