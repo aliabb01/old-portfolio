@@ -8,7 +8,7 @@
         >
             <v-avatar
                 size="170"
-                color="#C4C4C4"
+                color="#C4C4C4" 
             >
                 <span>Pic</span>
                 <!-- <img

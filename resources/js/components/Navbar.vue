@@ -90,8 +90,14 @@ export default {
 
 @media (min-width: 800px) {
     .navbar {
-        position: sticky !important; 
+        position: sticky !important;
         top: 0 !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        padding-top: 1.5rem;
     }
 }
 
