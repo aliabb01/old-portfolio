@@ -1,7 +1,6 @@
 <template>
     <div class="techFirst--main">
         
-
         <div 
             class="container"
             style="min-height: 20rem"
@@ -12,7 +11,18 @@
             <span>{{ techData[selectedTech].shortDescription }}</span>
             <p class="techDescription">{{ techData[selectedTech].description }}</p>
 
-            <p>{{ techData[selectedTech].experience }}</p>
+            <p class="techStatName">Started:</p>
+
+            <p>{{ techData[selectedTech].experience }} ago</p>
+
+            <p class="techStatName">Experience:</p>
+
+            <v-progress-linear
+                rounded
+                :value="techData[selectedTech].experienceLevel"
+                :color="techData[selectedTech].experienceLevel >= 75 ? 'red' : (techData[selectedTech].experienceLevel > 40 ? 'yellow' : (techData[selectedTech].experienceLevel < 40 ? 'green' : 'white'))"
+            >
+            </v-progress-linear>
         </div>
 
     </div>
@@ -48,6 +58,10 @@ export default {
 }
 
 .techDescription {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+}
+
+.techStatName {
+    font-size: 1rem;
 }
 </style>

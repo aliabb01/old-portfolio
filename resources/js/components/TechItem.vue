@@ -9,8 +9,16 @@
             <v-img 
                 :src="imgSrc"
                 max-width="5rem"
-                :style="hover ? '' : { filter: 'grayscale(100%)' }"
+                :style="selectedTech==index ? '' : { filter: 'grayscale(100%)' }"
             >
+                <template v-slot:placeholder>
+                    <v-skeleton-loader
+                        :loading="true"
+                        class="mx-auto"
+                        type="image"
+                        :dark="dark"
+                    ></v-skeleton-loader>
+                </template>
             </v-img>
 
             <span 

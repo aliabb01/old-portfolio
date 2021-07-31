@@ -4,7 +4,7 @@
             <span
                 class="techLabel"
                 :style="darkTheme ? { color: darkNameLabel } : { color: lightNameLabel }"
-            >Technologies I am using</span>
+            >Technologies I have experience with</span>
 
             <div class="d-flex justify-content-center mt-5">
                 <div
@@ -21,7 +21,6 @@
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-12 mx-2 d-flex justify-content-center align-items-center">
-                
                 <TechInfo />
             </div>
         </div>
