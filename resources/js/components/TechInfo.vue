@@ -20,7 +20,7 @@
             <v-progress-linear
                 rounded
                 :value="techData[selectedTech].experienceLevel"
-                :color="techData[selectedTech].experienceLevel >= 75 ? 'red' : (techData[selectedTech].experienceLevel > 40 ? 'yellow' : (techData[selectedTech].experienceLevel < 40 ? 'green' : 'white'))"
+                :color="techData[selectedTech].experienceLevel >= 75 ? 'red' : (techData[selectedTech].experienceLevel > 40 ? 'yellow' : (techData[selectedTech].experienceLevel < 40 ? 'green' : ''))"
             >
             </v-progress-linear>
         </div>
