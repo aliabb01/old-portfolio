@@ -41,6 +41,10 @@
         <div class="">
             <Tech />
         </div>
+
+        <div class="py-15">
+            <ContactContainer />
+        </div>
               
     </main>
 </template>
@@ -50,12 +54,13 @@ import IntroFirst from '../components/IntroFirst.vue';
 import IntroSecond from '../components/IntroSecond.vue';
 import Portfolio from '../components/Portfolio.vue';
 import Tech from '../components/Tech.vue';
+import ContactContainer from '../components/ContactContainer.vue';
 
 import themes from '../themes';
 import { mapState } from 'vuex';
 
 export default {
-    components: { IntroFirst, IntroSecond, Portfolio, Tech },
+    components: { IntroFirst, IntroSecond, Portfolio, Tech, ContactContainer },
     data() {
         return {
             lightFirst: themes.light.primary,
