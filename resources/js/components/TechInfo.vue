@@ -1,11 +1,9 @@
 <template>
     <div class="techFirst--main">
-        
         <div 
             class="container"
             style="min-height: 20rem"
             :style="darkTheme ? { color: darkNameLabel } : { color: lightNameLabel }"
-            id="techInfoContainer"
         >
             <span class="techName">{{ techData[selectedTech].name }}</span>
             <span>{{ techData[selectedTech].shortDescription }}</span>

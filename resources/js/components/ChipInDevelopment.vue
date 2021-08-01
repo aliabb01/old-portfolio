@@ -5,7 +5,9 @@
         :color="color"
         :style="hover ? [{ transform: 'rotate(' + -370 + 'deg)' }, { transition: 'all 0.2s' }] : ''"
     >
-        {{ text }}
+        <span class="chipInDev">
+            {{ text }}
+        </span>
     </v-chip>
 </template>
 
@@ -15,4 +17,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.chipInDev {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.0rem;
+}
+</style>

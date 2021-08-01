@@ -10,13 +10,14 @@
                 :src="imgSrc"
                 max-width="5rem"
                 :style="selectedTech==index ? '' : { filter: 'grayscale(100%)' }"
+                contain
             >
                 <template v-slot:placeholder>
                     <v-skeleton-loader
                         :loading="true"
                         class="mx-auto"
                         type="image"
-                        :dark="dark"
+                        :dark="darkTheme"
                     ></v-skeleton-loader>
                 </template>
             </v-img>
@@ -56,7 +57,6 @@ export default {
             document.getElementById(id).scrollIntoView({
                 behavior: 'smooth'
             });
-            console.log("Scrolled");
         }
     }
 }

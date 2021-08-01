@@ -1,5 +1,5 @@
 <template>
-    <section class="tech-section mx-5 my-10">
+    <section class="tech-section mx-5 my-10" id="portfolio">
         <div class="text-center my-10">
             <span class="portfolio-heading-label"
                 :style="darkTheme ? {color: darkText } : { color: lightText }"

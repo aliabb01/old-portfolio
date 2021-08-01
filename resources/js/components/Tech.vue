@@ -11,7 +11,6 @@
                     style="height: 0.3rem; width: 3rem; border-radius: 30px;"
                     :style="darkTheme ? { backgroundColor: darkUnderline } : { backgroundColor: lightUnderline }"
                 >
-                    
                 </div>
             </div>
         </div>
@@ -20,7 +19,9 @@
                 <TechLogos />
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 mx-2 d-flex justify-content-center align-items-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 mx-2 d-flex justify-content-center align-items-center"
+                id="techInfoContainer"
+            >
                 <TechInfo />
             </div>
         </div>
@@ -52,7 +53,7 @@ export default {
 
 <style>
 .techLabel {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: 'Source Sans Pro', sans-serif;
 }
 </style>
