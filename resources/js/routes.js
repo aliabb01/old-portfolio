@@ -2,7 +2,6 @@ import VueRouter from 'vue-router';
 import Home from './pages/Home.vue';
 import About from './pages/About.vue';
 import Projects from './pages/Projects.vue';
-import Contact from './pages/Contact.vue';
 import PortfolioItemPage from './pages/PortfolioItemPage.vue';
 
 const routes = [
@@ -21,11 +20,11 @@ const routes = [
         name: 'projects',
         component: Projects,
     },
-    {
-        path: '/contact',
-        name: 'contact',
-        component: Contact,
-    },
+    // {
+    //     path: '/contact',
+    //     name: 'contact',
+    //     component: Contact,
+    // },
     {
         path: '/portfolio/:id',
         name: 'portfolioPage',
