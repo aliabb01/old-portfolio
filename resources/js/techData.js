@@ -11,7 +11,7 @@ const calculateDiff = (then) => {
     const days = now.diff(then, 'days');
     then.add(days, 'days');
 
-    const experience = (years ? (years + " years ") : '') + (months ? ( months + " months ") : (days + " days "));
+    const experience = (years ? (years + " years ") : '') + (months ? ( months + (months==1 ? " month " : " months ")) : (days + " days "));
     return experience;
 }
 
@@ -28,6 +28,8 @@ const jQExperience = calculateDiff(moment("20200401"));
 const laravelExperience = calculateDiff(moment("20200210"));
 
 const vueExperience = calculateDiff(moment("20210501"));
+
+const nuxtExperience = calculateDiff(moment("20210615"));
 
 const reactExperience = calculateDiff(moment("20210501"));
 
@@ -94,6 +96,14 @@ const techData = [
     },
     {
         id: 8,
+        imgSrc: '/images/techlogos/nuxt.svg',
+        name: 'Nuxt',
+        description: 'Nuxt.js is a free and open source web application framework based on Vue.js, Node.js, Webpack and Babel.js.',
+        experience: nuxtExperience,
+        experienceLevel: 35
+    },
+    {
+        id: 9,
         imgSrc: '/images/techlogos/react.svg',
         name: 'React',
         description: 'React is a free and open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications',
@@ -101,7 +111,7 @@ const techData = [
         experienceLevel: 65
     },
     {
-        id: 9,
+        id: 10,
         imgSrc: '/images/techlogos/figma.svg',
         name: 'Figma',
         description: 'Figma is a web-based graphics editing and user interface design app. It can be used to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, prototyping designs, crafting social media posts, and everything in between',
