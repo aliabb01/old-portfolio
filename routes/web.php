@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactMailController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SinglePageController;
@@ -18,5 +19,7 @@ use App\Http\Controllers\SinglePageController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Route::post('/contact/send', [ContactMailController::class, 'send']);
 
 Route::get('/{any}', [SinglePageController::class, 'index'])->where('any', '.*');
