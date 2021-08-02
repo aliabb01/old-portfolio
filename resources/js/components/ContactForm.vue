@@ -1,68 +1,83 @@
 <template>
     <div
-        class="contactBox container-sm"
+        class="contactBox container-sm rounded-xl"
         :style=" darkTheme ? { backgroundColor: darkBg } : { backgroundColor: lightBg } "
     >
-        <div class="row">
-
-        <div class="col">
+        <div class="">
             <p class="contactBox--label mb-10"
                 :style="darkTheme ? { color: darkText } : { color: lightText }"
             >Leave me a message:</p>
 
-            <v-text-field 
-                class="contactBox--input" 
-                placeholder="Name" 
-                counter="25"
-                filled
-                no-resize
-                type="name"
-                :dark="darkTheme"
+            <v-form
+                class="contact-form"
+                name="contact-form"
+                lazy-validation
+                @submit="contactFormSubmit"
             >
-            </v-text-field>
-
-            <v-text-field 
-                class="contactBox--input" 
-                placeholder="Email" 
-                counter="40"
-                filled
-                no-resize
-                type="email"
-                :dark="darkTheme"
-            >
-            </v-text-field>
             
             <!-- csrf -->
             <input type="hidden" name="_token" :value="csrf" />
 
-            <v-textarea 
-                class="contactBox--textarea" 
-                placeholder="Message" 
-                counter="144"
-                filled
-                no-resize
-                type="message"
-                :dark="darkTheme"
-            >
-            </v-textarea>
-        </div>
+                <v-text-field
+                    v-model="name"
+                    class="contactBox--input" 
+                    placeholder="Name" 
+                    :counter="25"
+                    maxlength="25"
+                    filled
+                    no-resize
+                    type="name"
+                    :dark="darkTheme"
+                    required
+                >
+                </v-text-field>
+                <v-text-field
+                    v-model="email"
+                    class="contactBox--input" 
+                    placeholder="Email" 
+                    :counter="40"
+                    maxlength="40"
+                    filled
+                    no-resize
+                    type="email"
+                    :dark="darkTheme"
+                    required
+                >
+                </v-text-field>
 
-        <div class="col">
-            <v-icon
-                :color="lightIconBg"
-                size="3rem"
-            >
-                mdi-whatsapp
-            </v-icon>
-
-            <v-icon
-                :color="lightIconBg"
-                size="3rem"
-            >
-                mdi-instagram
-            </v-icon>
-        </div>
-        
+                <v-textarea
+                    v-model="message"
+                    class="contactBox--textarea" 
+                    placeholder="Message" 
+                    :counter="144"
+                    maxlength="144"
+                    filled
+                    no-resize
+                    type="message"
+                    :dark="darkTheme"
+                    required
+                >
+                </v-textarea>
+                <div style="max-width: 25rem;">
+                    <v-hover v-slot="{ hover }">
+                        <v-btn
+                            :color="darkTheme ? darkBtnBg : lightBtnBg"
+                            :disabled="!canSubmit"
+                            :loading="isLoading"
+                            type="submit"
+                            rounded
+                            :elevation="hover ? 0 : 5"
+                            :dark="darkTheme"
+                            style="color: white;"
+                        >
+                            Send
+                            <v-icon class="mx-2">
+                                mdi-send
+                            </v-icon>
+                        </v-btn>
+                    </v-hover>
+                </div>
+            </v-form>
         </div>
     </div>
 </template>
@@ -79,8 +94,53 @@ export default {
             lightText: themes.light.text,
             darkText: themes.dark.text,
 
-            lightIconBg: themes.light.secondary,
-            darkIconBg: themes.dark.secondary
+            lightBtnBg: themes.light.secondary,
+            darkBtnBg: themes.dark.secondary,
+
+            name: '',
+            email: '',
+            message: '',
+            isLoading: false,
+            showSuccessAlert: false,
+            showErrorAlert: false,
+            canSubmit: false,
+        }
+    },
+    methods: {
+        contactFormSubmit(e) {
+            this.isLoading = true
+            e.preventDefault();
+            axios.post("/contact/send", {
+                name: this.name,
+                email: this.email,
+                message: this.message
+            })
+            .then(response => {
+                if(response.status == 200) {
+                    this.showSuccessAlert = true
+
+                    setTimeout(() => {
+                        this.showSuccessAlert = false
+                    }, 3100);
+                }
+            })
+            .catch(error => {
+                this.showErrorAlert = true
+            })
+            .finally(() => {
+                this.isLoading = false;
+                this.name="";
+                this.email="";
+                this.message="";
+            });
+        }
+    },
+    updated() {
+        if(this.name == "" || this.email == "" || this.message == "") {
+            this.canSubmit = false;
+        }
+        if(this.name != "" && this.email != "" && this.message != "") {
+            this.canSubmit = true;
         }
     },
     computed: {
@@ -113,5 +173,9 @@ export default {
 
 .contactBox--textarea {
     width: 25rem;
+}
+
+.contactLinks:hover {
+    text-decoration: none;
 }
 </style>

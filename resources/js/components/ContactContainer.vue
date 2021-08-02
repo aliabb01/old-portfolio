@@ -13,9 +13,7 @@
         </div>
 
         <div class="">
-            <div>
-                <ContactForm />
-            </div>
+            <ContactForm />
         </div>
     </div>
 </template>
