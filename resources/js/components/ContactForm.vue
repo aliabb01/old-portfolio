@@ -1,12 +1,14 @@
 <template>
     <div
-        class="contactBox container-sm rounded-xl"
+        class="contactBox container-sm rounded-xl d-flex justify-content-center"
         :style=" darkTheme ? { backgroundColor: darkBg } : { backgroundColor: lightBg } "
     >
-        <div class="">
+        <div class="" style="max-width: 100%;">
             <p class="contactBox--label mb-10"
                 :style="darkTheme ? { color: darkText } : { color: lightText }"
-            >Leave me a message:</p>
+            >
+                Leave me a message:
+            </p>
 
             <v-form
                 class="contact-form"
@@ -68,7 +70,7 @@
                             rounded
                             :elevation="hover ? 0 : 5"
                             :dark="darkTheme"
-                            style="color: white;"
+                            style="color: white; text-transform: none;"
                         >
                             Send
                             <v-icon class="mx-2">
@@ -163,7 +165,7 @@ export default {
 }
 
 .contactBox--label {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: "Source Sans Pro", sans-serif;
 }
 
