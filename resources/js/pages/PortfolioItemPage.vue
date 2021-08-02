@@ -28,7 +28,7 @@
                                 @click="$router.push({
                                     name: 'portfolioPage',
                                     params: {
-                                        id: --id
+                                        id: --index
                                     }
                                 })"
                                 small
@@ -57,7 +57,7 @@
                                 @click="$router.push({
                                     name: 'portfolioPage',
                                     params: {
-                                        id: ++id,
+                                        id: ++index,
                                     }
                                 })"
                                 small
@@ -148,6 +148,8 @@ export default {
 
             lightTag: themes.light.tag,
             darkTag: themes.dark.tag,
+
+            index: this.id
         }
     },
     computed: {

@@ -8,7 +8,7 @@
             hide-delimiter-background
             progress
             progress-color="#41A0FD"
-            v-model="startPoint"
+            v-model="startValue"
         >
             <v-carousel-item
                 v-for="(slideImg, i) in carouselImg"
@@ -70,6 +70,7 @@ export default {
         return {
             imagesOpen: false,
             imageId: 0,
+            startValue: this.startPoint
         }
     },
 };
