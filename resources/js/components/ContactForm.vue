@@ -31,6 +31,9 @@
                 :dark="darkTheme"
             >
             </v-text-field>
+            
+            <!-- csrf -->
+            <input type="hidden" name="_token" :value="csrf" />
 
             <v-textarea 
                 class="contactBox--textarea" 
@@ -81,6 +84,12 @@ export default {
         }
     },
     computed: {
+        csrf() {
+            return document
+                .querySelector('meta[name="csrf-token"]')
+                .getAttribute("content");
+        },
+
         ...mapState(["darkTheme"]),
     },
 };
