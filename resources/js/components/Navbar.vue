@@ -12,7 +12,7 @@
             <div class="nav">
                 <router-link to="/" class="navlink mx-2">Home</router-link>
                 <router-link to="/about" class="navlink mx-2">About</router-link>
-                <router-link to="/" class="navlink mx-2">Projects</router-link>
+                <router-link @click.native="scroll('portfolio')" to="/" class="navlink mx-2">Projects</router-link>
                 <router-link to="/contact" class="navlink mx-2">Contact Me</router-link>
             </div>
             <div style="display: flex;" >
@@ -73,6 +73,9 @@ export default {
         }
     },
     methods: {
+        scroll(id) {
+            scrollToID(id)
+        },
         ...mapMutations(["toggleTheme"])
     },
     mounted() {

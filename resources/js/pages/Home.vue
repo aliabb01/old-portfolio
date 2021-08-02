@@ -34,7 +34,7 @@
             </v-row>
         </div>
 
-        <div class="portfolio-cont my-15">
+        <div class="portfolio-cont py-15" id="portfolio">
             <Portfolio />
         </div>
 
