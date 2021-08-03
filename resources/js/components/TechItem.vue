@@ -11,6 +11,7 @@
                 max-width="5rem"
                 :style="selectedTech==index ? '' : { filter: 'grayscale(100%)' }"
                 contain
+                :dark="darkTheme" 
             >
                 <template v-slot:placeholder>
                     <v-skeleton-loader
