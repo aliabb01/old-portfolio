@@ -1,4 +1,4 @@
-import moment from "moment";
+import moment from "moment/dist/moment";
 
 const calculateDiff = (then) => {
     const now = moment();
@@ -11,7 +11,7 @@ const calculateDiff = (then) => {
     const days = now.diff(then, 'days');
     then.add(days, 'days');
 
-    const experience = (years ? (years + " years ") : '') + (months ? ( months + (months==1 ? " month " : " months ")) : (days + " days "));
+    const experience = (years ? (years==1 ? (years + ' year ') : (years + " years ")) : '') + (months ? ( months + (months==1 ? " month " : " months ")) : (days + " days "));
     return experience;
 }
 
@@ -32,6 +32,8 @@ const vueExperience = calculateDiff(moment("20210501"));
 const nuxtExperience = calculateDiff(moment("20210615"));
 
 const reactExperience = calculateDiff(moment("20210501"));
+
+const gitExperience = calculateDiff(moment("20200310"));
 
 const figmaExperience = calculateDiff(moment("20210715"));
 
@@ -112,6 +114,14 @@ const techData = [
     },
     {
         id: 10,
+        imgSrc: '/images/techlogos/git.svg',
+        name: 'Git',
+        description: 'Git is software for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development',
+        experience: gitExperience,
+        experienceLevel: 85,
+    },
+    {
+        id: 11,
         imgSrc: '/images/techlogos/figma.svg',
         name: 'Figma',
         description: 'Figma is a web-based graphics editing and user interface design app. It can be used to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, prototyping designs, crafting social media posts, and everything in between',
