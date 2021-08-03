@@ -1,25 +1,26 @@
 <template>
 <!-- home-main -->
     <main>
+        <vue-particles
+            style="position : absolute; width:50%; height:89vh; z-index: 4;"
+            color="#1E90FF"
+            :particleOpacity="1"
+            :particlesNumber="15"
+            shapeType="circle"
+            :particleSize="4"
+            linesColor="#1E90FF"
+            :linesWidth="1"
+            :lineLinked="true"
+            :lineOpacity="0.4"
+            :linesDistance="150"
+            :moveSpeed="2"
+            :hoverEffect="true"
+            hoverMode="repulse"
+            :clickEffect="true"
+            clickMode="repulse"
+        >
+        </vue-particles>
         <div>
-            <vue-particles
-                color="#1E90FF"
-                :particleOpacity="1"
-                :particlesNumber="15"
-                shapeType="circle"
-                :particleSize="4"
-                linesColor="#1E90FF"
-                :linesWidth="1"
-                :lineLinked="true"
-                :lineOpacity="0.4"
-                :linesDistance="150"
-                :moveSpeed="2"
-                :hoverEffect="true"
-                hoverMode="repulse"
-                :clickEffect="true"
-                clickMode="repulse"
-            >
-            </vue-particles>
 
             <v-row class="" style="height: 100%;">
                 <v-col md="6" class="text-center div1 py-15">
@@ -42,10 +43,9 @@
             <Tech />
         </div>
 
-        <div class="py-15">
+        <div class="py-15" style="position: relative;">
             <ContactContainer />
         </div>
-              
     </main>
 </template>
 
@@ -99,10 +99,10 @@ export default {
     z-index: 3;
 }
 
-#particles-js {
+/* #particles-js {
     position : absolute;
     width:50%;
     height:89vh;
     z-index: 4;
-}
+} */
 </style>
