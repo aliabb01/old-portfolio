@@ -9,11 +9,19 @@
             <span>{{ techData[selectedTech].shortDescription }}</span>
             <p class="techDescription">{{ techData[selectedTech].description }}</p>
 
-            <p class="techStatName">Started:</p>
+            <p class="techStatName"
+                style="font-weight: bold;"
+                :style="darkTheme ? { color: darkSpecName } : { color: lightSpecName }"
+            >
+            Started:</p>
 
             <p>{{ techData[selectedTech].experience }} ago</p>
 
-            <p class="techStatName">Experience:</p>
+            <p class="techStatName"
+                style="font-weight: bold;"
+                :style="darkTheme ? { color: darkSpecName } : { color: lightSpecName }"
+            >
+            Experience:</p>
 
             <v-progress-linear
                 rounded
@@ -37,6 +45,9 @@ export default {
 
             lightNameLabel: themes.light.text,
             darkNameLabel: themes.dark.text,
+
+            lightSpecName: themes.light.secondary,
+            darkSpecName: themes.dark.secondary
         }
     },
     computed: {

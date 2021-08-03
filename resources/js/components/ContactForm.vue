@@ -1,13 +1,20 @@
 <template>
+<!-- :style=" darkTheme ? { backgroundColor: darkBg } : { backgroundColor: lightBg } " -->
     <div
-        class="contactBox container-sm rounded-xl d-flex justify-content-center"
-        :style=" darkTheme ? { backgroundColor: darkBg } : { backgroundColor: lightBg } "
+        class="contactBox container-sm rounded-xl d-flex justify-content-center"   
     >
         <div class="" style="max-width: 100%;">
-            <p class="contactBox--label mb-10"
+
+            <p class="contactBox--labelMain text-center"
                 :style="darkTheme ? { color: darkText } : { color: lightText }"
             >
-                Leave me a message:
+                Have a <span class="contactBox--labelMain--color">project</span> or <span class="contactBox--labelMain--color">website</span> in mind?
+            </p>
+            
+            <p class="contactBox--label mb-10 text-center"
+                :style="darkTheme ? { color: darkText } : { color: lightText }"
+            >
+                Then leave me a message:
             </p>
 
             <v-form
@@ -23,7 +30,7 @@
                 <v-text-field
                     v-model="name"
                     class="contactBox--input" 
-                    placeholder="Name" 
+                    placeholder="Name"
                     :counter="25"
                     maxlength="25"
                     filled
@@ -68,12 +75,14 @@
                             :loading="isLoading"
                             type="submit"
                             rounded
-                            :elevation="hover ? 0 : 5"
+                            elevation="0"
                             :dark="darkTheme"
                             style="color: white; text-transform: none;"
                         >
                             Send
-                            <v-icon class="mx-2">
+                            <v-icon class="mx-2 sendMessageIcon"
+                                :style="hover ? { transform: 'translateX(' + '1rem' + ')' } : ''"
+                            >
                                 mdi-send
                             </v-icon>
                         </v-btn>
@@ -164,17 +173,26 @@ export default {
     padding: 50px;
 }
 
+.contactBox--labelMain {
+    font-size: 1.5rem;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.contactBox--labelMain--color {
+    color: limegreen;
+}
+
 .contactBox--label {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: "Source Sans Pro", sans-serif;
 }
 
 .contactBox--input {
-    width: 20rem;
+    width: 25rem;
 }
 
 .contactBox--textarea {
-    width: 25rem;
+    width: 30rem;
 }
 
 .contactLinks:hover {
