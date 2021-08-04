@@ -11,7 +11,7 @@
 
             <p class="techStatName"
                 style="font-weight: bold;"
-                :style="darkTheme ? { color: darkSpecName } : { color: lightSpecName }"
+                :style="{ color: lightSpecName }"
             >
             Started:</p>
 
@@ -19,7 +19,7 @@
 
             <p class="techStatName"
                 style="font-weight: bold;"
-                :style="darkTheme ? { color: darkSpecName } : { color: lightSpecName }"
+                :style="{ color: lightSpecName }"
             >
             Experience:</p>
 

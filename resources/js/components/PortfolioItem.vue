@@ -25,7 +25,7 @@
 
                     <ChipFeatured
                         :featured="featured"
-                        color="red lighten-2"
+                        color="red lighten-1"
                         text="Featured Work"
                         :hover="hover"
                     />

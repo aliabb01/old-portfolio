@@ -43,7 +43,7 @@
             <Tech />
         </div>
 
-        <div class="py-15" style="position: relative;">
+        <div class="py-15 contact-blob-bg" style="position: relative;">
             <ContactContainer />
         </div>
     </main>
@@ -98,6 +98,13 @@ export default {
     border-bottom-left-radius: 100px;
     z-index: 3;
 }
+
+/* .contact-blob-bg {
+    background-image: url('/images/contact-bg.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+} */
 
 /* #particles-js {
     position : absolute;

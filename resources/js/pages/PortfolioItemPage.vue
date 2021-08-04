@@ -2,10 +2,10 @@
     <div>
         <v-container>
             <v-btn
-                style="text-transform: none;"
+                style="text-transform: none; color: white;"
                 class="my-5"
                 color="red lighten-1"
-                outlined
+                rounded
                 @click="$router.push({
                     name: 'home'
                 })"

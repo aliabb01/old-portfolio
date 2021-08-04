@@ -37,8 +37,6 @@ const gitExperience = calculateDiff(moment("20200310"));
 
 const figmaExperience = calculateDiff(moment("20210715"));
 
-
-
 const techData = [
     {
         id: 1,
