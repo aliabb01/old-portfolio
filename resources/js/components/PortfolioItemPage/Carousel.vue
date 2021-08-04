@@ -8,7 +8,7 @@
             hide-delimiter-background
             progress
             progress-color="#41A0FD"
-            v-model="startValue"
+            v-model="carouselIndex"
         >
             <v-carousel-item
                 v-for="(slideImg, i) in carouselImg"
@@ -70,9 +70,15 @@ export default {
         return {
             imagesOpen: false,
             imageId: 0,
-            startValue: this.startPoint
+            startValue: this.startPoint,
+            carouselIndex: 0,
         }
     },
+    watch: {
+        $route(to, from) {
+            this.carouselIndex = this.startValue;
+        }
+    }
 };
 </script>
 
