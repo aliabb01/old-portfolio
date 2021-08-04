@@ -38,6 +38,7 @@
                         v-model="sortPortfolio"
                         mandatory
                         class="my-2 ml-5"
+                        hide-details="auto"
                     >
 
                         <v-radio
