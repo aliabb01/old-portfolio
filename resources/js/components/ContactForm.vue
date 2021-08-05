@@ -89,6 +89,19 @@
                     </v-hover>
                 </div>
             </v-form>
+
+            <Alert
+                v-if="showSuccessAlert"
+                color="green darken-1"
+                message="Your message has been sent!"
+            />
+
+            <Alert
+                v-if="showErrorAlert"
+                color="red lighten-1"
+                message="Failed to send your message!"
+            />
+
         </div>
     </div>
 </template>
@@ -96,7 +109,10 @@
 <script>
 import themes from "../themes";
 import { mapState } from 'vuex';
+
+import Alert from "../components/Alert.vue";
 export default {
+    components: { Alert },
     data() {
         return {
             lightBg: themes.light.placeholder,
@@ -112,9 +128,9 @@ export default {
             email: '',
             message: '',
             isLoading: false,
+            canSubmit: false,
             showSuccessAlert: false,
             showErrorAlert: false,
-            canSubmit: false,
         }
     },
     methods: {
@@ -137,6 +153,10 @@ export default {
             })
             .catch(error => {
                 this.showErrorAlert = true
+
+                setTimeout(() => {
+                    this.showErrorAlert = false
+                }, 3100);
             })
             .finally(() => {
                 this.isLoading = false;
