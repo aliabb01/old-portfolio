@@ -20,8 +20,7 @@
             <div class="d-flex mb-5">
                 <v-btn
                     icon
-                    :color="darkTheme ? darkSort : lightSort"
-                    
+                    :color="darkTheme ? darkSort : lightSort" 
                     x-large
                     @click="sortMenuOpen = !sortMenuOpen"
                 >
