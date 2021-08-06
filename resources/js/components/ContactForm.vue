@@ -1,9 +1,9 @@
 <template>
 <!-- :style=" darkTheme ? { backgroundColor: darkBg } : { backgroundColor: lightBg } " -->
     <div
-        class="contactBox container-sm rounded-xl d-flex justify-content-center"
+        class="contactCont container-sm rounded-xl d-flex justify-content-center"
     >
-        <div class="" style="max-width: 100%;">
+        <div class="contactBox" style="max-width: 100%;">
 
             <p class="contactBox--labelMain text-center"
                 :style="darkTheme ? { color: darkText } : { color: lightText }"
@@ -90,6 +90,8 @@
                 </div>
             </v-form>
 
+            <v-scroll-x-transition>
+
             <Alert
                 v-if="showSuccessAlert"
                 color="green darken-1"
@@ -101,6 +103,7 @@
                 color="red lighten-1"
                 message="Failed to send your message!"
             />
+            </v-scroll-x-transition>
 
         </div>
     </div>
@@ -187,6 +190,10 @@ export default {
 </script>
 
 <style>
+.contactCont {
+    position: relative;
+}
+
 .contactBox {
     /* max-width: 50rem;
     min-height: 30rem; */
@@ -218,4 +225,5 @@ export default {
 .contactLinks:hover {
     text-decoration: none;
 }
+
 </style>
