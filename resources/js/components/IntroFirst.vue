@@ -7,7 +7,6 @@
 
         <br>        
 
-        <IntroSocialLinks />
         <v-divider
             :dark="darkTheme ? true : false"
         ></v-divider>
@@ -19,9 +18,15 @@
 import IntroAvatar from '../components/IntroAvatar.vue';
 import IntroDescription from '../components/IntroDescription.vue';
 import IntroButton from '../components/IntroButton.vue';
-import IntroSocialLinks from '../components/IntroSocialLinks.vue';
+import CV from '../components/CV.vue';
+
+import { mapState } from 'vuex';
+
 export default {
-    components: { IntroAvatar, IntroDescription, IntroButton, IntroSocialLinks },
+    components: { IntroAvatar, IntroDescription, IntroButton, CV },
+    computed: {
+        ...mapState(["darkTheme"]),
+    },
 }
 </script>
 

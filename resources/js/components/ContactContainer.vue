@@ -1,5 +1,5 @@
 <template>
-    <div class="container" id="contact-me">
+    <div class="container">
         <p class="contactFormLabel text-center"
             :style="darkTheme ? { color: darkText } : { color: lightText }"
         >Contact me</p>

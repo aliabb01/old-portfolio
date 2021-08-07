@@ -31,6 +31,10 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,600&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
