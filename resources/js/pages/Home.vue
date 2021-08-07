@@ -43,8 +43,12 @@
             <Tech />
         </div>
 
-        <div class="py-15 contact-blob-bg" style="position: relative;">
+        <div class="py-15" id="contact-me">
             <ContactContainer />
+        </div>
+
+        <div class="container-sm text-center py-10">
+            <IntroSocialLinks />
         </div>
     </main>
 </template>
@@ -55,12 +59,13 @@ import IntroSecond from '../components/IntroSecond.vue';
 import Portfolio from '../components/Portfolio.vue';
 import Tech from '../components/Tech.vue';
 import ContactContainer from '../components/ContactContainer.vue';
+import IntroSocialLinks from '../components/IntroSocialLinks.vue';
 
 import themes from '../themes';
 import { mapState } from 'vuex';
 
 export default {
-    components: { IntroFirst, IntroSecond, Portfolio, Tech, ContactContainer },
+    components: { IntroFirst, IntroSecond, Portfolio, Tech, ContactContainer, IntroSocialLinks },
     data() {
         return {
             lightFirst: themes.light.primary,
