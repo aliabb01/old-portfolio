@@ -1,5 +1,4 @@
 <template>
-    
     <v-hover v-slot="{ hover }">
         <div class="col-4 d-flex flex-column justify-content-center align-items-center techBox rounded-lg"
             :style="'background-color:' + (darkTheme ? (hover ? darkHover : '') : (hover ? lightHover : ''))"

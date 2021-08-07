@@ -8,6 +8,9 @@
         <br>        
 
         <IntroSocialLinks />
+        <v-divider
+            :dark="darkTheme ? true : false"
+        ></v-divider>
         
     </div>
 </template>

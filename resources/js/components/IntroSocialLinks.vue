@@ -1,9 +1,5 @@
 <template>
     <div>
-        <v-divider
-            :dark="darkTheme ? true : false"
-        ></v-divider>
-
         <div 
             class="container-xs mx-15 pt-5 rounded-xl elevation-3"
             :style="darkTheme ? { backgroundColor: darkPlaceholder } : { backgroundColor: ligthPlaceholder }"
