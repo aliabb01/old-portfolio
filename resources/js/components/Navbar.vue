@@ -31,7 +31,7 @@
                     
                     mdi-lightbulb
                 </v-icon>
-                <v-icon v-if="!darkTheme" color="#e5e5e5" size="40">
+                <v-icon v-if="!darkTheme" color="white" size="40">
                    
                     mdi-lightbulb
                 </v-icon>
