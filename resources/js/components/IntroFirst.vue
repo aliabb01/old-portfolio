@@ -11,7 +11,9 @@
             :dark="darkTheme ? true : false"
         ></v-divider>
 
-        <CV />
+        <div>
+            <CV />
+        </div>
         
     </div>
 </template>

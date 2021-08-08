@@ -50,6 +50,10 @@
         <div class="container-sm text-center py-10">
             <IntroSocialLinks />
         </div>
+
+        <div class="mt-3">
+            <Footer />
+        </div>
     </main>
 </template>
 
@@ -60,12 +64,13 @@ import Portfolio from '../components/Portfolio.vue';
 import Tech from '../components/Tech.vue';
 import ContactContainer from '../components/ContactContainer.vue';
 import IntroSocialLinks from '../components/IntroSocialLinks.vue';
+import Footer from '../components/Footer.vue';
 
 import themes from '../themes';
 import { mapState } from 'vuex';
 
 export default {
-    components: { IntroFirst, IntroSecond, Portfolio, Tech, ContactContainer, IntroSocialLinks },
+    components: { IntroFirst, IntroSecond, Portfolio, Tech, ContactContainer, IntroSocialLinks, Footer },
     data() {
         return {
             lightFirst: themes.light.primary,
