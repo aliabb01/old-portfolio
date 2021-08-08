@@ -10,11 +10,10 @@
                 <!-- View my CV -->
                 <v-btn
                     icon
-                    elevation="2"
                     height="4rem"
                     width="4rem"
                     :color="lightBtn"
-                    style="border-width: 2px; border-style: solid"
+                    style="border-width: 3px; border-style: solid"
                     :style=" { borderColor: lightBtn }"
                 >
                     <v-icon
@@ -27,11 +26,10 @@
             <div class="col">
                 <v-btn
                     icon
-                    elevation="2"
                     height="4rem"
                     width="4rem"
                     :color="lightBtn"
-                    style="border-width: 2px; border-style: solid"
+                    style="border-width: 3px; border-style: solid"
                     :style=" { borderColor: lightBtn }"
                 >
                     <v-icon
