@@ -41,8 +41,9 @@
                         style="position: relative"
                     >
                         <v-btn
-                            style="position: absolute; top: 2px; right: 2px; z-index: 3;"
+                            style="position: absolute; top: 2px; right: 2px; z-index: 3; background-color: red;"
                             icon
+                            color="white"
                             @click="imagesOpen = false"
                         >
                             <v-icon>mdi-close</v-icon>
