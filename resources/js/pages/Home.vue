@@ -48,7 +48,7 @@
         </div>
 
         <div class="container-sm text-center py-10">
-            <IntroSocialLinks />
+            <SocialLinks />
         </div>
 
         <div class="mt-3">
@@ -63,14 +63,14 @@ import IntroSecond from '../components/IntroSecond.vue';
 import Portfolio from '../components/Portfolio.vue';
 import Tech from '../components/Tech.vue';
 import ContactContainer from '../components/ContactContainer.vue';
-import IntroSocialLinks from '../components/IntroSocialLinks.vue';
+import SocialLinks from '../components/SocialLinks.vue';
 import Footer from '../components/Footer.vue';
 
 import themes from '../themes';
 import { mapState } from 'vuex';
 
 export default {
-    components: { IntroFirst, IntroSecond, Portfolio, Tech, ContactContainer, IntroSocialLinks, Footer },
+    components: { IntroFirst, IntroSecond, Portfolio, Tech, ContactContainer, SocialLinks, Footer },
     data() {
         return {
             lightFirst: themes.light.primary,
