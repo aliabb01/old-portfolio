@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="footerDiv">
         <v-footer 
             padless
             :color="darkTheme ? darkBg : lightBg"
@@ -33,5 +33,8 @@ export default {
 </script>
 
 <style>
-
+.footerDiv {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.1rem;
+}
 </style>
