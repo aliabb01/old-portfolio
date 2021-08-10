@@ -1,7 +1,7 @@
 <template>
 <!-- :style=" darkTheme ? { backgroundColor: darkBg } : { backgroundColor: lightBg } " -->
     <div
-        class="contactCont container-sm rounded-xl d-flex justify-content-center"
+        class="contactCont container rounded-xl d-flex justify-content-center"
     >
         <div class="contactBox" style="max-width: 100%;">
 
