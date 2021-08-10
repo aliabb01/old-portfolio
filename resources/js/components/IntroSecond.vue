@@ -22,7 +22,6 @@
                 src="/images/web_developer.svg"
                 max-width="45rem"
             >
-
             </v-img>
         </div>
     </div>
