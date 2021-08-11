@@ -11,12 +11,14 @@
                 color="#e5e5e5"
                 class="rounded-xl mx-3"
                 elevation="3"
-                height="200"
+                height="180"
                 width="500"
             >
                 <p class="description-text"
                     :style="darkTheme ? { color: darkNameLabel } : { color: lightNameLabel }"
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore atque ipsum eius quidem ea quae</p>
+                >
+                    Software Engineer with 2 years of experience in Full Stack Web Development
+                </p>
             </v-sheet>
         </div>
     </div>
