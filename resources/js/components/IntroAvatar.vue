@@ -17,15 +17,15 @@
                     src="/images/self.jpg"
                     alt="Ali Abbasov"
                     onContextMenu="return false;"
-                    max-width="160"
-                    max-height="160"
+                    max-width="165"
+                    max-height="165"
                 >
                 <template v-slot:placeholder>
                     <v-skeleton-loader
                         :loading="true"
                         class="mx-auto"
                         type="image"
-                        :dark="dark"
+                        :dark="darkTheme"
                     ></v-skeleton-loader>
                 </template>
                 </v-img>
