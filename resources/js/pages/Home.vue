@@ -22,12 +22,12 @@
         </vue-particles>
         <div>
 
-            <v-row class="" style="height: 100%;">
+            <v-row class="" style="">
                 <v-col md="6" class="text-center div1 py-15">
                     <IntroFirst />
                 </v-col>
                 <!-- <div class="white-triangle"></div> -->
-                <v-col md="6" class="text-center div2 py-15 shadow" 
+                <v-col md="6" class="text-center div2 py-15 shadow"
                     :style="darkTheme ? {backgroundColor: darkSecond} : {backgroundColor: ligthSecond}"
                 >
                     <IntroSecond />

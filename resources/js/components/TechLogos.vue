@@ -10,6 +10,13 @@
                 :title="item.name"
                 :index="i"
             />
+            <p 
+                class="m-auto"
+                style="font-family: Source Sans Pro, sans-serif;"
+                :style="'color: ' + (darkTheme ? darkText : lightText) + ';'"
+            >
+                And more
+            </p>
         </div>
         
     </div>
@@ -17,17 +24,20 @@
 
 <script>
 import { mapState } from "vuex";
+import themes from '../themes';
+
 import TechItem from './TechItem.vue';
 
 export default {
     components: { TechItem },
     data() {
         return {
-            
+            lightText: themes.light.text,
+            darkText: themes.dark.text,
         }
     },
     computed: {
-        ...mapState(["techData"]),
+        ...mapState(["darkTheme", "techData"]),
     },
 }
 </script>

@@ -125,7 +125,7 @@ const techData = [
         description: 'Figma is a web-based graphics editing and user interface design app. It can be used to do all kinds of graphic design work from wireframing websites, designing mobile app interfaces, prototyping designs, crafting social media posts, and everything in between',
         experience: figmaExperience,
         experienceLevel: 35
-    }
+    },
 ];
 
 export default techData;
