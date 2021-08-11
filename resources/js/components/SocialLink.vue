@@ -9,6 +9,7 @@
             >
                 mdi-{{ icon }}
             </v-icon>
+            <br>
             <p class="socialLink--text"
                 :style="'color: ' + (hover ? (darkTheme ? lightSecondary : darkSecondary) : (darkTheme ? darkTextLabel : lightTextLabel)) + ';'"
             >{{ text }}</p>
