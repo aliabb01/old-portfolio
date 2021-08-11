@@ -25,15 +25,15 @@
                     color="yellow"
                     v-model="theme"
                     @click="toggleTheme(darkTheme)"
+                    :dark="darkTheme"
                 >
                 </v-switch>
-                <v-icon v-if="darkTheme" color="yellow" size="40" >                        
-                    
-                    mdi-lightbulb
+                <v-icon v-if="darkTheme" color="white" size="40">
+                    mdi-moon-full
                 </v-icon>
-                <v-icon v-if="!darkTheme" color="white" size="40">
+                <v-icon v-if="!darkTheme" color="yellow" size="40">
                    
-                    mdi-lightbulb
+                    mdi-white-balance-sunny
                 </v-icon>
                 
             </div>
@@ -94,7 +94,7 @@ export default {
 
     /* background-color: #195bdb; */
 
-    z-index: 99;
+    z-index: 100;
 }
 
 @media (min-width: 800px) {
