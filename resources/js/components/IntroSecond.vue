@@ -2,7 +2,7 @@
     <div style="" class="d-flex flex-column justify-content-center">
         <span class="description2">I am  
             <vue-typer
-                :text='["a full stack web developer","a programmer"]'
+                :text='["a web developer","a programmer"]'
                 :repeat='Infinity'
                 :shuffle='false'
                 initial-action='typing'
