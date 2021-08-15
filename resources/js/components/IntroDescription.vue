@@ -17,7 +17,7 @@
                 <p class="description-text"
                     :style="darkTheme ? { color: darkNameLabel } : { color: lightNameLabel }"
                 >
-                    Software Engineer with 2 years of experience in  Web Development
+                    Software Engineer with 2 years of experience in Web Development
                 </p>
             </v-sheet>
         </div>
