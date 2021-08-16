@@ -1,8 +1,10 @@
 import VueRouter from 'vue-router';
 import Home from './pages/Home.vue';
-import About from './pages/About.vue';
+// import About from './pages/About.vue';
 import Projects from './pages/Projects.vue';
 import PortfolioItemPage from './pages/PortfolioItemPage.vue';
+
+import PageNotFound from './pages/PageNotFound.vue';
 
 const routes = [
     {
@@ -10,11 +12,11 @@ const routes = [
         name: 'home',
         component: Home,
     },
-    {
-        path: '/about',
-        name: 'about',
-        component: About,
-    },
+    // {
+    //     path: '/about',
+    //     name: 'about',
+    //     component: About,
+    // },
     {
         path: '/projects',
         name: 'projects',
@@ -30,6 +32,11 @@ const routes = [
         name: 'portfolioPage',
         component: PortfolioItemPage,
         props: true,
+    },
+    {
+        path: '*',
+        name: 'pageNotFound',
+        component: PageNotFound
     }
 ]
 

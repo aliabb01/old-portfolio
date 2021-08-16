@@ -11,7 +11,7 @@
             </div> -->
             <div class="nav">
                 <router-link @click.native="scrollToTop()" to="/" class="navlink mx-2">Home</router-link>
-                <router-link to="/about" class="navlink mx-2">About</router-link>
+                <!-- <router-link to="/about" class="navlink mx-2">About</router-link> -->
                 <router-link @click.native="scroll('portfolio')" to="/" class="navlink mx-2">Portfolio</router-link>
                 <router-link @click.native="scroll('contact-me')" to="/" class="navlink mx-2">Contact Me</router-link>
             </div>
