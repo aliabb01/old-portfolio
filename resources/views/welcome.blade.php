@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        <!-- Google Search Console tag -->
+        <meta name="google-site-verification" content="z0DRLygPLhIVapi2gjZW2bf0-8FPTq0vZYELVXF6zQ0" />
+
         <title>Ali Abbasov</title>
 
         <!-- Fonts -->
