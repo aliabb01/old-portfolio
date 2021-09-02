@@ -3,7 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <!-- Description, keywords, author -->
+        <meta name="description" content="Portfolio website of Ali Abbasov">
+        <meta name="keywords" content="aliabbasov, ali abbasov, Ali Abbasov, AliAbbasov, ali abbasov developer, ali abbasov github, ali abbasov portfolio, aliabb01, Əli Abbasov, əli abbasov">
+        <meta name="author" content="Ali Abbasov">
 
         <!-- Google Search Console tag -->
         <meta name="google-site-verification" content="z0DRLygPLhIVapi2gjZW2bf0-8FPTq0vZYELVXF6zQ0" />
