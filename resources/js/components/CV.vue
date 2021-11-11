@@ -38,7 +38,7 @@
                     style="border-width: 3px; border-style: solid; text-decoration: none;"
                     :style=" { borderColor: lightBtn }"
                     target="_blank"
-                    href="https://drive.google.com/file/d/1IzYCw5dwFEb9TOMQ4dRJKOJ5pPrP5ae9/view"
+                    href="https://drive.google.com/file/d/1EacruxIlnCPqX-U-1a9U7fvgGpvnsnnJ/view"
                 >
                     <v-icon
                         size="2rem"
@@ -57,7 +57,7 @@
                     style="border-width: 3px; border-style: solid; text-decoration: none;"
                     :style=" { borderColor: lightBtn }"
                     target="_blank"
-                    href="https://drive.google.com/u/0/uc?id=1IzYCw5dwFEb9TOMQ4dRJKOJ5pPrP5ae9&export=download"
+                    href="https://drive.google.com/u/0/uc?id=1EacruxIlnCPqX-U-1a9U7fvgGpvnsnnJ&export=download"
                 >
                     <v-icon
                         size="2rem"
